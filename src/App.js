@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
+import Media from './Components/Media';
 import Footer from './Components/footer';
 import './App.css';
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Media />
         <Footer />
       </div>
     );
