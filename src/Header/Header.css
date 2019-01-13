@@ -1,0 +1,12 @@
+#slideshow {
+  position: relative;
+}
+
+#slideshow > div {
+  position: absolute;
+}
+
+.test {
+  font-family: Avenir, proxima-nova, arial, sans-serif;
+  color: #545454;
+}
