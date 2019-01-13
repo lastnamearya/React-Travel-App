@@ -4,6 +4,7 @@ import Logo from './Images/headout-logo.png';
 import ImageOne from './Images/landing-one.png';
 import ImageTwo from './Images/landing-two.png';
 import ImageThree from './Images/landing-three.png';
+import MobileApp from './Images/mobile-app.gif';
 import './Header.css';
 
 class Header extends Component {
@@ -11,15 +12,39 @@ class Header extends Component {
     return (
       <React.Fragment>
         <div className="header-wrapper">
-          <div className="first-line">
-            <div>
-              <img id="logo" src={Logo} alt="Headout" />
+          <div className="wrap">
+            <div className="nav">
+              <div className="first-line">
+                <div>
+                  <img id="logo" src={Logo} alt="Headout" />
+                </div>
+                <div className="select-city">
+                  <p>Select City</p>
+                </div>
+                <div className="select-experience">
+                  <p>Search for experiences</p>
+                </div>
+              </div>
+              <div className="second-line">
+                <div className="best-picked">
+                  <p>Headout Picks</p>
+                  <p>Best Sellers</p>
+                  <p>Abu Dhabi City Tours</p>
+                  <p>Amsterdam Attractions</p>
+                  <p>Burj Khalifa</p>
+                </div>
+                <div className="support">
+                  <p>24/7 Support</p>
+                  <p>English/USD</p>
+                </div>
+              </div>
             </div>
-            <div className="select-city">
-              <p>Select City</p>
-            </div>
-            <div className="select-experience">
-              <p>Search for experiences</p>
+            <div className="header-right">
+              <p style={{ color: '#ec1943' }}>Sign in</p>
+              <div className="download-app">
+                <img src={MobileApp} id="mobile-app" alt="Download our App" />
+                <p>Download App</p>
+              </div>
             </div>
           </div>
           <SlideShow />
@@ -40,12 +65,12 @@ class SlideShow extends Component {
 
     setInterval(() => {
       $('#slideshow > div:first')
-        .fadeOut(4000)
+        .fadeOut(1000)
         .next()
-        .fadeIn(4000)
+        .fadeIn(1000)
         .end()
         .appendTo('#slideshow');
-    }, 5000);
+    }, 4000);
   };
   render() {
     return (
