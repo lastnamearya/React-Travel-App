@@ -43,7 +43,7 @@ class Header extends Component {
               <p style={{ color: '#ec1943' }}>Sign in</p>
               <div className="download-app">
                 <img src={MobileApp} id="mobile-app" alt="Download our App" />
-                <p>Download App</p>
+                <p style={{ color: '#24a1b2' }}>Download App</p>
               </div>
             </div>
           </div>

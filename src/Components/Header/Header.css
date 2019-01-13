@@ -10,6 +10,7 @@
 
 .first-line {
   display: flex;
+  cursor: pointer;
 }
 
 .first-line p {
@@ -39,6 +40,7 @@
 
 .second-line {
   display: flex;
+  cursor: pointer;
 }
 
 .second-line p {
@@ -46,6 +48,10 @@
   font-size: 13px;
   margin-right: 28px;
   padding-top: 5px;
+}
+
+.second-line p:hover {
+  color: #ec1943;
 }
 
 .best-picked {
