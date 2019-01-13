@@ -18,29 +18,52 @@ class Header extends Component {
                 <div>
                   <img id="logo" src={Logo} alt="Headout" />
                 </div>
-                <div className="select-city">
-                  <p>Select City</p>
-                </div>
-                <div className="select-experience">
-                  <p>Search for experiences</p>
-                </div>
+                <div className="select-city" />
+                <div className="select-experience" />
               </div>
               <div className="second-line">
                 <div className="best-picked">
-                  <p>Headout Picks</p>
+                  <div>
+                    <p>Headout Picks</p>
+                  </div>
                   <p>Best Sellers</p>
                   <p>Abu Dhabi City Tours</p>
                   <p>Amsterdam Attractions</p>
                   <p>Burj Khalifa</p>
                 </div>
                 <div className="support">
-                  <p>24/7 Support</p>
-                  <p>English/USD</p>
+                  <p>
+                    24/7 Support{' '}
+                    <span className="arrow-down">
+                      {' '}
+                      <i class="fas fa-angle-down" />
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      marginRight: '0px'
+                    }}
+                  >
+                    English/USD
+                    <span className="arrow-down">
+                      {' '}
+                      <i class="fas fa-angle-down" />
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
             <div className="header-right">
-              <p style={{ color: '#ec1943' }}>Sign in</p>
+              <div className="sign-in">
+                <i class="fas fa-user-circle sign-in-user" />
+                <p style={{ color: '#ec1943', marginLeft: '10px' }}>
+                  Sign in
+                  <span className="arrow-down">
+                    {' '}
+                    <i class="fas fa-angle-down" />
+                  </span>
+                </p>
+              </div>
               <div className="download-app">
                 <img src={MobileApp} id="mobile-app" alt="Download our App" />
                 <p style={{ color: '#24a1b2' }}>Download App</p>

@@ -15,6 +15,7 @@
 
 .footer-wrapper ul {
   list-style-type: none;
+  padding-top: 12px;
 }
 
 .footer-wrapper ul li {
@@ -22,6 +23,7 @@
   height: 27px;
   text-align: left;
   cursor: pointer;
+  color: #6a6a6a;
 }
 
 .footer-wrapper ul li:hover {
@@ -56,6 +58,7 @@ h3 {
 .column-four p {
   text-align: left;
   padding-left: 37px;
+  color: #6a6a6a;
 }
 
 .social-media-contact {

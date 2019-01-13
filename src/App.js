@@ -18,4 +18,12 @@ class App extends Component {
   }
 }
 
+{
+  /* <div className="heart-parent">
+  <p>Made with</p>
+  <div className="heart" />
+  <p>by lastnamearya</p>
+</div> */
+}
+
 export default App;
