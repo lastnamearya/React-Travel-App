@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Logo from './Images/headout-logo.png';
-import ImageOne from './Images/landing-one.png';
-import ImageTwo from './Images/landing-two.png';
-import ImageThree from './Images/landing-three.png';
-import MobileApp from './Images/mobile-app.gif';
+import ImageOne from '../Images/landing-one.png';
+import ImageTwo from '../Images/landing-two.png';
+import ImageThree from '../Images/landing-three.png';
+import MobileApp from '../Images/mobile-app.gif';
 import './Header.css';
 
 class Header extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="header-wrap">
         <div className="header-wrapper">
-          <div className="wrap">
+          <div className="header-left">
             <div className="nav">
               <div className="first-line">
                 <div>
@@ -47,10 +47,10 @@ class Header extends Component {
               </div>
             </div>
           </div>
-          <SlideShow />
         </div>
+        <SlideShow />
         <Searchbar />
-      </React.Fragment>
+      </div>
     );
   }
 }
