@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Logo from './Images/headout-logo.png';
 import ImageOne from './Images/landing-one.png';
 import ImageTwo from './Images/landing-two.png';
 import ImageThree from './Images/landing-three.png';
@@ -8,10 +9,23 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <div>
-        <p className="test">Hi There</p>
-        <SlideShow />
-      </div>
+      <React.Fragment>
+        <div className="header-wrapper">
+          <div className="first-line">
+            <div>
+              <img id="logo" src={Logo} alt="Headout" />
+            </div>
+            <div className="select-city">
+              <p>Select City</p>
+            </div>
+            <div className="select-experience">
+              <p>Search for experiences</p>
+            </div>
+          </div>
+          <SlideShow />
+        </div>
+        <Searchbar />
+      </React.Fragment>
     );
   }
 }
@@ -26,9 +40,9 @@ class SlideShow extends Component {
 
     setInterval(() => {
       $('#slideshow > div:first')
-        .fadeOut(3000)
+        .fadeOut(4000)
         .next()
-        .fadeIn(3000)
+        .fadeIn(4000)
         .end()
         .appendTo('#slideshow');
     }, 5000);
@@ -45,6 +59,18 @@ class SlideShow extends Component {
         <div className="img-crop">
           <img src={ImageThree} alt="Explore the World with us" />
         </div>
+      </div>
+    );
+  }
+}
+
+class Searchbar extends Component {
+  render() {
+    return (
+      <div className="search-bar">
+        <div className="select-city-large" />
+        <div className="select-experience-large" />
+        <button id="go">Let's Go</button>
       </div>
     );
   }
