@@ -1,0 +1,28 @@
+.download-wrap {
+  height: 375px;
+}
+
+.download-wrapper {
+  padding-top: 60px;
+  display: flex;
+  width: 70%;
+  margin: 0px auto;
+}
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.download-section h2 {
+  margin-bottom: 16px;
+}
+
+.download-section p {
+  color: #7b7b7b;
+  font-size: 14.4px;
+  line-height: 21.168px;
+  margin: 35px 45px;
+}
