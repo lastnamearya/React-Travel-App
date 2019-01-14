@@ -1,6 +1,7 @@
 .top-cities-wrapper {
   width: 85%;
   margin: 0px auto;
+  height: 425px;
 }
 
 .top-cities-wrapper h1 {
@@ -8,4 +9,58 @@
   color: #545454;
   font-weight: 300;
   font-size: 27px;
+}
+
+.top-cities-carousel-wrap {
+  margin: 25px;
+  height: 300px;
+}
+
+.city-card {
+  width: 216px;
+  height: 270px;
+  box-shadow: -2px 6px 9px -2px rgba(140, 133, 140, 1);
+  margin: 10px;
+}
+
+.city-card {
+  cursor: pointer;
+  background-size: cover;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  transition-duration: 2s;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #fff;
+  border-right: 200px solid transparent;
+  border-left: 0px solid transparent;
+  position: absolute;
+  top: 200px;
+}
+
+.city-details {
+  position: absolute;
+  bottom: 10px;
+  width: 216px;
+  background-color: white;
+  transition: display 1s ease-in-out;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.expose {
+  display: none;
+  transition-duration: 1s;
+}
+
+.city-card:hover .expose,
+.city-card:focus .expose {
+  display: block;
+}
+
+.city-arrow img {
+  font-size: 20px;
 }
