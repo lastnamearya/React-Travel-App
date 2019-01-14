@@ -25,6 +25,14 @@ class TopCities extends Component {
           <div className="top-cities-carousel-wrap">
             <SimpleSlider />
           </div>
+          <hr
+            style={{
+              height: '1px',
+              color: '#e7e7e7',
+              borderTop: 'none',
+              borderLeft: 'none'
+            }}
+          />
         </div>
       </div>
     );
@@ -56,16 +64,20 @@ class CityCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
     return (
-      <div
-        className="city-card"
-        style={{
-          backgroundImage: url
-        }}
-      >
-        <div id="triangle" />
-        <div className="city-details">
-          <p>{this.props.city}</p>
-          <p className="expose">Kuda kachra</p>
+      <div className="city-card-wrapper">
+        <div
+          className="city-card"
+          style={{
+            backgroundImage: url
+          }}
+        >
+          <div id="triangle" />
+          <div className="city-details">
+            <p>{this.props.city}</p>
+            <div className="city-hidden">
+              <p>Kuda kachra</p>
+            </div>
+          </div>
         </div>
       </div>
     );
