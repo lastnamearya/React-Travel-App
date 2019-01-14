@@ -133,11 +133,17 @@
 
 /* Search Bar */
 
+.search-bar-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+}
+
 .search-bar {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 14px;
 }
 
 .select-city-large {
