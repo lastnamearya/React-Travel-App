@@ -1,0 +1,11 @@
+.headout-picks-wrapper {
+  width: 85%;
+  margin: 0px auto;
+}
+
+.headout-picks-wrapper h1 {
+  text-align: left;
+  color: #545454;
+  font-weight: 300;
+  font-size: 27px;
+}

@@ -34,7 +34,7 @@ class Header extends Component {
                     onChange={this.changeExperience}
                     value={this.state.experience}
                   />
-                  <i class="fas fa-search" />
+                  <i className="fas fa-search" />
                 </div>
               </div>
               <div className="second-line">
