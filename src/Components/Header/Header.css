@@ -116,6 +116,7 @@
   align-items: center;
   margin-top: -3px;
   min-width: 120px;
+  justify-content: flex-end;
 }
 
 .download-app p {
