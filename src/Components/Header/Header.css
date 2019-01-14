@@ -36,10 +36,25 @@
 }
 
 .select-experience {
-  width: 653px;
-  height: 35px;
   background-color: #f4f4f4;
   margin-left: 5px;
+  display: flex;
+}
+
+.select-experience input {
+  border: none;
+  background: #f4f4f4;
+  width: 580px;
+  height: 35px;
+  outline: none;
+  padding-left: 25px;
+}
+
+.select-experience i {
+  color: #cbcbcb;
+  font-size: 15px;
+  padding-top: 12px;
+  padding-right: 20px;
 }
 
 .second-line {
@@ -100,6 +115,7 @@
   display: flex;
   align-items: center;
   margin-top: -3px;
+  min-width: 120px;
 }
 
 .download-app p {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import Logo from './Header/Images/headout-logo.png';
+import HeadoutLogo from './Images/headout.png';
 import Googlelogo from './Images/gplus-connect.png';
 import Twitterlogo from './Images/twitter-connect.png';
 import Facebooklogo from './Images/fb-connect.png';
@@ -11,7 +11,7 @@ const Footer = () => (
   <div className="footer-wrap">
     <div className="footer-wrapper">
       <div className="column-one">
-        <img id="footer" src={Logo} alt="Headout" />
+        <img id="footer" src={HeadoutLogo} alt="Headout" />
         <p>Headout is building the future of how we experience our cities.</p>
         <p
           style={{

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import $ from 'jquery';
-import Logo from './Images/headout-logo.png';
+import Logo from '../Images/headout.png';
 import ImageOne from '../Images/landing-one.png';
 import ImageTwo from '../Images/landing-two.png';
 import ImageThree from '../Images/landing-three.png';
@@ -9,6 +9,11 @@ import MobileApp from '../Images/mobile-app.gif';
 import './Header.css';
 
 class Header extends Component {
+  state = {
+    experience: ''
+  };
+  changeExperience = event => this.setState({ experience: event.target.value });
+
   render() {
     return (
       <div className="header-wrap">
@@ -22,7 +27,15 @@ class Header extends Component {
                 <div className="select-city">
                   <Searchbar style={smallSearchbar} />
                 </div>
-                <div className="select-experience" />
+                <div className="select-experience">
+                  <input
+                    type="text"
+                    placeholder="Search for experiences"
+                    onChange={this.changeExperience}
+                    value={this.state.experience}
+                  />
+                  <i class="fas fa-search" />
+                </div>
               </div>
               <div className="second-line">
                 <div className="best-picked">
