@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Searchbar from './Searchbar';
 import Logo from './Images/headout-logo.png';
 import ImageOne from '../Images/landing-one.png';
 import ImageTwo from '../Images/landing-two.png';
@@ -107,18 +108,6 @@ class SlideShow extends Component {
         <div className="img-crop">
           <img src={ImageThree} alt="Explore the World with us" />
         </div>
-      </div>
-    );
-  }
-}
-
-class Searchbar extends Component {
-  render() {
-    return (
-      <div className="search-bar">
-        <div className="select-city-large" />
-        <div className="select-experience-large" />
-        <button id="go">Let's Go</button>
       </div>
     );
   }
