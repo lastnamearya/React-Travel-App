@@ -153,6 +153,14 @@
   box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
   background: white;
   cursor: pointer;
+  display: flex;
+}
+
+.select-city-large i {
+  color: #9a9a9a;
+  padding-top: 18px;
+  padding-left: 30px;
+  font-size: 18px;
 }
 
 .select-experience-large {

@@ -77,6 +77,7 @@ class Header extends Component {
         <SlideShow />
         <div className="search-bar-div">
           <div className="select-city-large">
+            <i class="fas fa-map-marker" />
             <Searchbar style={customStyles} />
           </div>
           <div className="select-experience-large" />
@@ -115,15 +116,14 @@ const customStyles = {
     background: state.isSelected ? 'white' : 'white',
     fontSize: '13px',
     textAlign: 'left',
-    paddingLeft: '20px',
-    width: 150
+    width: 120
   }),
   control: () => ({
     width: 150,
     display: 'flex',
-    marginLeft: '30px',
     fontSize: '14px',
-    marginTop: '10px'
+    marginTop: '10px',
+    paddingLeft: '5px'
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
