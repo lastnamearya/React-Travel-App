@@ -9,3 +9,86 @@
   font-weight: 300;
   font-size: 27px;
 }
+
+.cards-wrapper {
+  display: flex;
+  width: 1152px;
+  height: 1152px;
+  margin: 35px auto;
+  flex-wrap: wrap;
+}
+
+/* Collection Card */
+
+.collection-card-wrapper {
+  width: 288px;
+  height: 288px;
+  text-align: center;
+}
+/* Image zoom on hover + Overlay colour */
+.card-parent {
+  width: 288px;
+  height: 288px;
+  overflow: hidden;
+  position: relative;
+  /* float: left; */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-child p {
+  font-size: 18px;
+  color: #ffffff !important;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 242px;
+  font-weight: 500;
+}
+
+.card-parent:hover .card-child,
+.card-parent:focus .card-child {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.card-parent:hover .card-child:before,
+.card-parent:focus .card-child:before {
+  display: block;
+  background-color: rgba(52, 73, 94, 0.5);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-parent:hover p,
+.card-parent:focus p {
+  display: block;
+}
+
+.card-child:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

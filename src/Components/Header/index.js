@@ -52,7 +52,7 @@ class Header extends Component {
                     24/7 Support{' '}
                     <span className="arrow-down">
                       {' '}
-                      <i class="fas fa-angle-down" />
+                      <i className="fas fa-angle-down" />
                     </span>
                   </p>
                   <p
@@ -63,7 +63,7 @@ class Header extends Component {
                     English/USD
                     <span className="arrow-down">
                       {' '}
-                      <i class="fas fa-angle-down" />
+                      <i className="fas fa-angle-down" />
                     </span>
                   </p>
                 </div>
@@ -71,12 +71,12 @@ class Header extends Component {
             </div>
             <div className="header-right">
               <div className="sign-in">
-                <i class="fas fa-user-circle sign-in-user" />
+                <i className="fas fa-user-circle sign-in-user" />
                 <p style={{ color: '#ec1943', marginLeft: '10px' }}>
                   Sign in
                   <span className="arrow-down">
                     {' '}
-                    <i class="fas fa-angle-down" />
+                    <i className="fas fa-angle-down" />
                   </span>
                 </p>
               </div>
@@ -90,7 +90,7 @@ class Header extends Component {
         <SlideShow />
         <div className="search-bar-div">
           <div className="select-city-large">
-            <i class="fas fa-map-marker" />
+            <i className="fas fa-map-marker" />
             <Searchbar style={customStyles} />
           </div>
           <div className="select-experience-large">
@@ -100,7 +100,7 @@ class Header extends Component {
               onChange={this.changeExperience}
               value={this.state.experience}
             />
-            <i class="fas fa-search" />
+            <i className="fas fa-search" />
           </div>
           <button id="go">Let's Go</button>
         </div>
