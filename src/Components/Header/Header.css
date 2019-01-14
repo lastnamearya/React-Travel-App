@@ -174,25 +174,45 @@
 
 .select-city-large i {
   color: #9a9a9a;
-  padding-top: 18px;
+  padding-top: 20px;
   padding-left: 30px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .select-experience-large {
-  height: 54px;
-  width: 324px;
   border-radius: 3px;
   box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
   margin-left: 5px;
   background: white;
 }
 
+.select-experience-large input {
+  border: none;
+  font-size: 13px;
+  padding-left: 20px;
+  width: 280px;
+  height: 52px;
+  outline: none;
+  -webkit-transition: width 0.5s ease-out;
+  -moz-transition: width 0.5s ease-out;
+  -o-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+}
+
+.select-experience-large input:focus-within {
+  width: 450px;
+}
+
+.select-experience-large i {
+  padding-right: 20px;
+  color: #cbcbcb;
+}
+
 #go {
   font-size: 16.2px;
   line-height: 22.68px;
   font-weight: 500;
-  width: 120px;
+  width: 110px;
   height: 54px;
   border-radius: 3px;
   border: none;

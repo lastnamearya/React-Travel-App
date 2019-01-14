@@ -93,7 +93,15 @@ class Header extends Component {
             <i class="fas fa-map-marker" />
             <Searchbar style={customStyles} />
           </div>
-          <div className="select-experience-large" />
+          <div className="select-experience-large">
+            <input
+              type="text"
+              placeholder="Search for experiences"
+              onChange={this.changeExperience}
+              value={this.state.experience}
+            />
+            <i class="fas fa-search" />
+          </div>
           <button id="go">Let's Go</button>
         </div>
       </div>
