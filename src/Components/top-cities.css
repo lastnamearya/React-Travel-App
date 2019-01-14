@@ -29,6 +29,12 @@
   transition-duration: 2s;
   margin: 10px;
   box-shadow: -2px 4px 15px -3px rgba(0, 0, 0, 0.47);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.city-card:hover {
+  transform: translateY(-0.18em);
 }
 
 #triangle {
@@ -43,7 +49,7 @@
 
 .city-card:hover #triangle,
 .city-card:focus #triangle {
-  bottom: 63px;
+  bottom: 55px;
 }
 
 .city-details {
@@ -57,6 +63,11 @@
   border-bottom-right-radius: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.city-card:hover .city-details,
+.city-card:focus .city-details {
+  bottom: 0px;
 }
 
 .city-details p {
