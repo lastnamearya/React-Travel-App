@@ -22,11 +22,28 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+#external {
+  color: #d03034;
+  padding-top: 15px;
+}
+
+.mobile-tablet {
+  color: #545454;
+  margin: 30% 30%;
+  width: 50%;
+}
+
+.mobile-tablet p {
+  margin-top: 10px;
+}
+
+.mobile-tablet img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+  .mobile-tablet {
+    width: 60%;
+    margin: 150px auto;
   }
 }
