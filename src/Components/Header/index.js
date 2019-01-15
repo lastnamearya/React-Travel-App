@@ -14,7 +14,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header-wrap">
-        <div className="header-wrapper">
+        <div className="header-wrapper navbar-fixed-top">
           <div className="header-left">
             <div className="nav">
               <div className="first-line">

@@ -2,11 +2,25 @@
   position: relative;
 }
 
+.navbar-fixed-top {
+  position: fixed;
+
+  right: 0;
+
+  left: 0;
+
+  z-index: 999;
+}
+
 .header-wrapper {
-  width: 81%;
-  margin: 10px auto 0 auto;
+  width: 100%;
+  margin: 0px auto 0;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
+  background: #fff;
+  height: 90px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 9px 0px;
 }
 
 .header-left {
