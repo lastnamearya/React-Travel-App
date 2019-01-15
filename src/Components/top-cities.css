@@ -144,6 +144,12 @@
 
 /* Media Queries */
 
+@media only screen and (min-width: 1200px) {
+  .top-cities-wrapper {
+    width: 95%;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .top-cities-wrapper {
     width: 70%;
