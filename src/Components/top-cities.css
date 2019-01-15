@@ -95,7 +95,6 @@
 
 #city-hidden {
   height: 40px;
-  /* display: none; */
 }
 
 #city-hidden p {
@@ -104,6 +103,10 @@
   color: #9a9a9a;
   padding-top: 3px;
   padding-bottom: auto;
+  -webkit-transition: display 0.5s ease-out;
+  -moz-transition: display 0.5s ease-out;
+  -o-transition: display 0.5s ease-out;
+  transition: display 0.5s ease-out;
 }
 
 .city-hidden p {
@@ -117,6 +120,10 @@
 .city-card:hover #city-hidden p,
 .city-card:focus #city-hidden p {
   display: block;
+  -webkit-transition: display 1s ease-out;
+  -moz-transition: display 1s ease-out;
+  -o-transition: display 1s ease-out;
+  transition: display 1s ease-out;
 }
 
 .expose {
