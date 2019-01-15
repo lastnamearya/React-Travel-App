@@ -27,6 +27,10 @@
   margin: 35px 45px;
 }
 
+.store {
+  cursor: pointer;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 1600px) {

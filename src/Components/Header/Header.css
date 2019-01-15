@@ -114,6 +114,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 }
 
 .sign-in-user {
@@ -132,6 +133,7 @@
   margin-top: -3px;
   min-width: 120px;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .download-app p {

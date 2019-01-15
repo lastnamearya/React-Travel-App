@@ -27,8 +27,8 @@ const Download = () => (
           the download link to get started right away!
         </p>
         <div>
-          <img src={Appstoreimg} alt="Apple Store" />
-          <img src={Playstoreimg} alt="Google Play Store" />
+          <img src={Appstoreimg} alt="Apple Store" className="store" />
+          <img src={Playstoreimg} alt="Google Play Store" className="store" />
         </div>
       </div>
       <div className="android">
