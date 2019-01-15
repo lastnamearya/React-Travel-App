@@ -29,3 +29,17 @@
   top: 400px;
   position: absolute;
 }
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .div-one,
+  .div-two,
+  .div-three {
+    height: 500px;
+  }
+
+  .slick-dots {
+    top: 440px;
+  }
+}

@@ -26,3 +26,11 @@
   line-height: 21.168px;
   margin: 35px 45px;
 }
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .download-wrapper {
+    width: 50%;
+  }
+}

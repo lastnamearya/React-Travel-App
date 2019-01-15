@@ -178,3 +178,11 @@
 .discount i {
   padding: 0 3px;
 }
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .headout-picks-wrapper {
+    width: 70%;
+  }
+}
