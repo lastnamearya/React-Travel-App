@@ -8,20 +8,17 @@ import Media from './Components/Media';
 import Footer from './Components/footer';
 import './App.css';
 
-import HeaderTest from './Components/Header/Headertest';
-
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Header />
+        <Header />
         <TopCities />
         <HeadoutPicks />
         <Collections />
         <Download />
         <Media />
-        <Footer /> */}
-        <HeaderTest />
+        <Footer />
       </div>
     );
   }

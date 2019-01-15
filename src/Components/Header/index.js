@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import $ from 'jquery';
+import Background from './Background';
 import Logo from '../Images/headout.png';
-import ImageOne from '../Images/landing-one.png';
-import ImageTwo from '../Images/landing-two.png';
-import ImageThree from '../Images/landing-three.png';
 import MobileApp from '../Images/mobile-app.gif';
 import './Header.css';
 
@@ -87,7 +84,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <SlideShow />
+        <Background />
         <div className="search-bar-div">
           <div className="select-city-large">
             <i className="fas fa-map-marker" />
@@ -200,40 +197,6 @@ class Searchbar extends Component {
         onChange={this.handleChange}
         options={options}
       />
-    );
-  }
-}
-
-class SlideShow extends Component {
-  componentDidMount() {
-    this.slideshow();
-  }
-
-  slideshow = () => {
-    $('#slideshow > div:gt(0)').hide();
-
-    setInterval(() => {
-      $('#slideshow > div:first')
-        .fadeOut(1000)
-        .next()
-        .fadeIn(1000)
-        .end()
-        .appendTo('#slideshow');
-    }, 4000);
-  };
-  render() {
-    return (
-      <div id="slideshow">
-        <div className="img-crop">
-          <img src={ImageOne} alt="Explore the World with us" />
-        </div>
-        <div className="img-crop">
-          <img src={ImageTwo} alt="Explore the World with us" />
-        </div>
-        <div className="img-crop">
-          <img src={ImageThree} alt="Explore the World with us" />
-        </div>
-      </div>
     );
   }
 }
