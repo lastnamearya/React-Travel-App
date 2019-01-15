@@ -179,36 +179,42 @@ const topCitiesData = [
   {
     id: 10,
     city: 'Venice',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/venice/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   },
   {
     id: 11,
     city: 'Milan',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/milan/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   },
   {
     id: 12,
     city: 'Naples',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/naples/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   },
   {
     id: 13,
     city: 'Budapest',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/budapest/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   },
   {
     id: 14,
     city: 'Edinburg',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/edinburgh/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   },
   {
     id: 15,
     city: 'Florence',
+    description: 'Enjoy and have fun in the City',
     url:
       'https://cdn-imgix.headout.com/cities/florence/images/mobile/morning.jpg?auto=compress&fm=webp&w=412.5&h=486&crop=faces&fit=min'
   }
