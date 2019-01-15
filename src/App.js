@@ -8,28 +8,23 @@ import Media from './Components/Media';
 import Footer from './Components/footer';
 import './App.css';
 
+import HeaderTest from './Components/Header/Headertest';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        {/* <Header />
         <TopCities />
         <HeadoutPicks />
         <Collections />
         <Download />
         <Media />
-        <Footer />
+        <Footer /> */}
+        <HeaderTest />
       </div>
     );
   }
-}
-
-{
-  /* <div className="heart-parent">
-  <p>Made with</p>
-  <div className="heart" />
-  <p>by lastnamearya</p>
-</div> */
 }
 
 export default App;
