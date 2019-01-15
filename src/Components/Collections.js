@@ -33,10 +33,10 @@ class CollectionCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
     return (
-      <div class="collection-card-wrapper">
-        <div class="card-parent">
+      <div className="collection-card-wrapper">
+        <div className="card-parent">
           <div
-            class="card-child"
+            className="card-child"
             style={{
               backgroundImage: url
             }}

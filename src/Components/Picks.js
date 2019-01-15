@@ -62,7 +62,8 @@ class PickedSlider extends React.Component {
               currency,
               currentPrice,
               ratings,
-              stars
+              stars,
+              discount
             }) => (
               <ExperienceCard
                 key={id}
@@ -73,6 +74,7 @@ class PickedSlider extends React.Component {
                 price={currentPrice}
                 ratings={ratings}
                 stars={stars}
+                discount={discount}
               />
             )
           )}
@@ -84,6 +86,7 @@ class PickedSlider extends React.Component {
 class ExperienceCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
+    const discount = this.props.discount;
     return (
       <div className="exp-card">
         <div
@@ -97,19 +100,33 @@ class ExperienceCard extends Component {
             <p id="exp-city">{this.props.city}</p>
             <p id="exp-description">{this.props.description}</p>
           </div>
-          <div className="price-section">
-            <div className="ratings-section">
-              <div className="stars">
-                <p id="stars-p">
-                  {this.props.stars}
-                  <span id="star"> &#9733;</span>
+          <div>
+            {discount ? (
+              <div className="discount">
+                <p>
+                  <span>
+                    <i className="fas fa-gift" />
+                  </span>
+                  {`upto ${this.props.discount}% off`}
                 </p>
               </div>
-              <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
-            </div>
-            <div className="price">
-              <p>from</p>
-              <p id="price">{`${this.props.currency} ${this.props.price}`}</p>
+            ) : (
+              <div className="discount" />
+            )}
+            <div className="price-section">
+              <div className="ratings-section">
+                <div className="stars">
+                  <p id="stars-p">
+                    {this.props.stars}
+                    <span id="star"> &#9733;</span>
+                  </p>
+                </div>
+                <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
+              </div>
+              <div className="price">
+                <p>from</p>
+                <p id="price">{`${this.props.currency} ${this.props.price}`}</p>
+              </div>
             </div>
           </div>
         </div>
