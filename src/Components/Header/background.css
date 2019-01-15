@@ -1,0 +1,49 @@
+.slider-div {
+  padding-top: 95px;
+}
+
+.div-one {
+  background-image: url('https://cdn-imgix-open.headout.com/desktop-flaps/cashback-01.jpg?auto=compress&fm=webp&h=501&crop=faces&fit=min');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 430px;
+}
+
+.div-two {
+  background-image: url('https://cdn-imgix-open.headout.com/desktop-flaps/about-01-01.jpg?auto=compress&fm=webp&h=501&crop=faces&fit=min');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 430px;
+}
+
+.div-three {
+  background-image: url('https://cdn-imgix-open.headout.com/flaps/non-city-specific/desktop/experience-desktop.png?auto=compress&fm=webp&h=501&crop=faces&fit=min');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 430px;
+}
+
+.slick-dots {
+  top: 400px;
+  position: absolute;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .div-one,
+  .div-two,
+  .div-three {
+    height: 500px;
+  }
+
+  .slick-dots {
+    top: 440px;
+  }
+}

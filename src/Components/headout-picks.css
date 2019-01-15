@@ -1,0 +1,188 @@
+.headout-picks-wrapper {
+  width: 85%;
+  margin: 35px auto;
+  height: 400px;
+}
+
+.headout-picks-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+
+.headout-picks-nav h1 {
+  color: #545454;
+  font-weight: 300;
+  font-size: 27px;
+  margin: 0px;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: #545454;
+}
+
+.view-all h3 {
+  margin: 0px;
+  font-size: 16.2px;
+  line-height: 22.68px;
+  font-weight: 400;
+}
+
+.view-all i {
+  font-size: 18px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.view-all:hover {
+  color: #4fc3f7;
+}
+
+.view-all:hover i {
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+.top-picked-carousel-wrap {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+/* Picked Card */
+
+.exp-card {
+  width: 270px;
+  height: 297px;
+  box-shadow: -1px 4px 20px -3px rgba(80, 79, 79, 0.3);
+  margin: 10px auto;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.exp-card:hover {
+  transform: translateY(-0.2em);
+  box-shadow: -4px 8px 15px -3px rgba(0, 0, 0, 0.47);
+}
+
+.exp-card-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 270px;
+  height: 166px;
+}
+
+.exp-info-wrap {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#exp-city {
+  text-align: left;
+  color: #9a9a9a;
+  font-size: 13px;
+  margin: 0px;
+  padding-top: 12px;
+}
+
+#exp-description {
+  color: #545454;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0px;
+  padding-top: 5px;
+}
+
+.exp-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 131px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  height: 45px;
+}
+
+.ratings-section {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  width: 50px;
+  height: 18px;
+  border-radius: 10px;
+  background: linear-gradient(340deg, #ffbb58, #f5c684);
+  padding-top: 3px;
+}
+
+#stars-p {
+  color: white;
+  font-weight: 700;
+}
+
+#ratings {
+  padding-left: 6px;
+  font-size: 10.8px;
+}
+
+.price-section p {
+  color: #9a9a9a;
+  font-size: 11px;
+  margin: 0px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#price {
+  color: #545454;
+  font-size: 19.8px;
+  padding-bottom: 10px;
+}
+
+#like {
+  position: absolute;
+  top: 10;
+  left: 10;
+}
+
+.discount {
+  color: #49d1fd;
+  font-size: 11px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.discount p {
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.discount i {
+  padding: 0 3px;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .headout-picks-wrapper {
+    width: 70%;
+  }
+}
