@@ -59,16 +59,11 @@
   border-left: 0px solid transparent;
   position: absolute;
   bottom: 60px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   margin-bottom: 0px;
+  transition: bottom 0.5s ease-in-out;
 }
-
-/* .city-card:hover #triangle,
-.city-card:focus #triangle {
-  bottom: 40px;
-  margin-bottom: 0px;
-} */
 
 .city-details {
   width: 216px;
@@ -102,7 +97,8 @@
 }
 
 #city-hidden p {
-  display: none;
+  transform: translate(9999px);
+  opacity: 0;
   font-size: 11.7px;
   color: #9a9a9a;
   padding-top: 3px;
@@ -123,11 +119,9 @@
 
 .city-card:hover #city-hidden p,
 .city-card:focus #city-hidden p {
-  display: block;
-  -webkit-transition: display 1s ease-out;
-  -moz-transition: display 1s ease-out;
-  -o-transition: display 1s ease-out;
-  transition: display 1s ease-out;
+  transition: opacity 0.5s linear;
+  transform: translate(0);
+  opacity: 1;
 }
 
 .expose {
