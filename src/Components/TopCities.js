@@ -19,11 +19,12 @@ class TopCities extends Component {
               height: '2px',
               border: 'none',
               marginTop: '0px',
-              marginLeft: '0px'
+              marginLeft: '0px',
+              marginBottom: '20px'
             }}
           />
           <div className="top-cities-carousel-wrap">
-            <SimpleSlider />
+            <CitySlider />
           </div>
           <hr
             style={{
@@ -39,7 +40,7 @@ class TopCities extends Component {
   }
 }
 
-class SimpleSlider extends React.Component {
+class CitySlider extends React.Component {
   render() {
     var settings = {
       infinite: true,

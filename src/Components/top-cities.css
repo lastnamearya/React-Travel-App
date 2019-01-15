@@ -15,6 +15,8 @@
 .top-cities-carousel-wrap {
   margin-top: 25px;
   height: 300px;
+  width: 1170px;
+  margin: 0 auto;
 }
 
 .city-card-wrapper {
@@ -29,7 +31,7 @@
   cursor: pointer;
   border-radius: 5px;
   transition-duration: 2s;
-  margin: 10px;
+  margin: 10px auto;
   box-shadow: -2px 4px 15px -3px rgba(0, 0, 0, 0.47);
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
