@@ -181,6 +181,12 @@
 
 /* Media Queries */
 
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .headout-picks-wrapper {
+    width: 95%;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .headout-picks-wrapper {
     width: 70%;
