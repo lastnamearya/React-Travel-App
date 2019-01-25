@@ -122,7 +122,7 @@
 }
 
 .stars {
-  width: 50px;
+  width: 55px;
   height: 18px;
   border-radius: 10px;
   background: linear-gradient(340deg, #ffbb58, #f5c684);
@@ -132,6 +132,10 @@
 #stars-p {
   color: white;
   font-weight: 700;
+}
+
+#star {
+  margin-left: 5px;
 }
 
 #ratings {
