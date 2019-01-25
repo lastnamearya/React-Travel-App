@@ -45,9 +45,7 @@
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px -36px 54px -10px rgba(0, 0, 0, 0.5);
 }
 
 .card-child p {
