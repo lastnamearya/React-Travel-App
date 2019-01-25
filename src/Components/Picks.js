@@ -90,6 +90,7 @@ class ExperienceCard extends Component {
     const url = `url(${this.props.url})`;
     const discount = this.props.discount;
     const cashback = this.props.cashback;
+    const currency = this.props.currency;
     return (
       <div className="exp-card">
         <div
@@ -110,31 +111,41 @@ class ExperienceCard extends Component {
             <p id="exp-description">{this.props.description}</p>
           </div>
           <div>
-            {discount ? (
-              <div className="discount">
-                <p>
-                  <span>
-                    <i className="fas fa-gift" />
-                  </span>
-                  {`upto ${this.props.discount}% off`}
-                </p>
-              </div>
-            ) : (
-              <div className="discount" />
-            )}
             <div className="price-section">
-              <div className="ratings-section">
-                <div className="stars">
-                  <p id="stars-p">
-                    {this.props.stars}
-                    <span id="star"> &#9733;</span>
-                  </p>
+              <div className="div">
+                {discount ? (
+                  <div className="discount">
+                    <p>
+                      <span>
+                        <i className="fas fa-gift" />
+                      </span>
+                      {`upto ${this.props.discount}% off`}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="discount" />
+                )}
+                <div className="ratings-section">
+                  <div className="stars">
+                    <p id="stars-p">
+                      {this.props.stars}
+                      <span id="star"> &#9733;</span>
+                    </p>
+                  </div>
+                  <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
                 </div>
-                <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
               </div>
               <div className="price">
                 <p>from</p>
-                <p id="price">{`${this.props.currency} ${this.props.price}`}</p>
+                {currency === 'AED' ? (
+                  <p id="price">{`${this.props.currency} ${
+                    this.props.price
+                  }`}</p>
+                ) : (
+                  <p id="price">{`${this.props.currency}${
+                    this.props.price
+                  }`}</p>
+                )}
               </div>
             </div>
           </div>
@@ -165,6 +176,8 @@ const Right = props => (
     />
   </div>
 );
+
+// Currently using this Data to Populate Headout Pics Card
 
 const pickedData = [
   {
