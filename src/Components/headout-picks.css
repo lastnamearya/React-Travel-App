@@ -1,7 +1,8 @@
 .headout-picks-wrapper {
   width: 85%;
   margin: 35px auto;
-  height: 400px;
+  height: 420px;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .headout-picks-nav {
