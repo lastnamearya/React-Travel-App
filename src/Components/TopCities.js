@@ -3,8 +3,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './top-cities.css';
-import LeftArrow from './Images/left-arrow.svg';
-import RightArrow from './Images/right-arrow.svg';
 
 class TopCities extends Component {
   render() {
@@ -91,27 +89,31 @@ class CityCard extends Component {
   }
 }
 
-const Left = props => (
-  <div className="city-arrow">
-    <img
-      src={LeftArrow}
-      onClick={props.onClick}
-      className="slick-prev"
-      alt="Left-arrow"
-    />
-  </div>
-);
+function Left(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="slick-arrow"
+      style={{ ...style, display: 'block' }}
+      onClick={onClick}
+    >
+      <i className="fas fa-arrow-left left-arrow" />
+    </div>
+  );
+}
 
-const Right = props => (
-  <div className="city-arrow">
-    <img
-      src={RightArrow}
-      onClick={props.onClick}
-      className="slick-next"
-      alt="Right-arrow"
-    />
-  </div>
-);
+function Right(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="slick-arrow-right"
+      style={{ ...style, display: 'block' }}
+      onClick={onClick}
+    >
+      <i className="fas fa-arrow-right right-arrow" />
+    </div>
+  );
+}
 
 const topCitiesData = [
   {
