@@ -45,10 +45,13 @@
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px -20px 56px -4px rgba(0, 0, 0, 0.5);
 }
 
 .card-child p {
-  font-size: 18px;
+  font-size: 17.5px;
   color: #ffffff !important;
   text-align: center;
   margin: auto;
@@ -56,17 +59,17 @@
   cursor: pointer;
   left: 0;
   right: 0;
-  top: 242px;
+  top: 245px;
   font-weight: 500;
 }
 
 .card-parent:hover .card-child,
 .card-parent:focus .card-child {
-  -ms-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card-parent:hover .card-child:before,
