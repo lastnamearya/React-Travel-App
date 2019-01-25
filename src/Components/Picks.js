@@ -3,8 +3,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './headout-picks.css';
-import LeftArrow from './Images/left-arrow.svg';
-import RightArrow from './Images/right-arrow.svg';
 
 class TopPicks extends Component {
   render() {
@@ -90,10 +88,15 @@ class PickedSlider extends React.Component {
 class ExperienceCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
-    const discount = this.props.discount;
-    const cashback = this.props.cashback;
-    const currency = this.props.currency;
-    const lastPrice = this.props.lastPrice;
+    const {
+      discount,
+      cashback,
+      currency,
+      lastPrice,
+      ratings,
+      stars
+    } = this.props;
+
     return (
       <div className="exp-card">
         <div
@@ -129,13 +132,33 @@ class ExperienceCard extends Component {
                   <div className="discount" />
                 )}
                 <div className="ratings-section">
-                  <div className="stars">
-                    <p id="stars-p">
-                      {this.props.stars}
-                      <span id="star"> &#9733;</span>
-                    </p>
-                  </div>
-                  <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
+                  {stars ? (
+                    <div className="stars">
+                      <p id="stars-p">
+                        {this.props.stars}
+                        <span id="star"> &#9733;</span>
+                      </p>
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        width: '25px',
+                        height: '20px',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(340deg, #ffbb58, #f5c684)',
+                        paddingTop: '3px'
+                      }}
+                    >
+                      <p id="stars-p">
+                        <span> &#9733;</span>
+                      </p>
+                    </div>
+                  )}
+                  {ratings ? (
+                    <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
+                  ) : (
+                    <p id="ratings">Newly Arrived</p>
+                  )}
                 </div>
               </div>
               <div className="price">
@@ -167,12 +190,6 @@ class ExperienceCard extends Component {
     );
   }
 }
-
-// const Left = props => (
-//   <div onClick={props.onClick} className="slick-prev">
-//     <img src={LeftArrow} alt="Left-arrow" />
-//   </div>
-// );
 
 function Left(props) {
   const { style, onClick } = props;
@@ -228,6 +245,17 @@ const pickedData = [
   },
   {
     id: 3,
+    currentPrice: 40.5,
+    lastPrice: 79,
+    currency: '$',
+    discount: 49,
+    city: 'NEW YORK',
+    description: 'King Kong - Broadway Week Discount',
+    url:
+      'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+  },
+  {
+    id: 4,
     currentPrice: 141,
     lastPrice: 146,
     currency: 'AED',
@@ -241,7 +269,7 @@ const pickedData = [
       'https://cdn-imgix.headout.com/tour/2636/TOUR-IMAGE/84609881-4697-4b73-bb46-9998b2fd7aa2-1866-dubai-burj-khalifa-at-the-top-01-4-.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
   },
   {
-    id: 4,
+    id: 5,
     currentPrice: 196,
     lastPrice: 206,
     currency: 'AED',
@@ -255,7 +283,7 @@ const pickedData = [
       'https://cdn-imgix.headout.com/tour/3832/TOUR-IMAGE/4306765f-f03f-47a0-a5c5-241ae6cd49f6-2545-dubai-aquarium-underwater-zoo-burj-khalifa-combo-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
   },
   {
-    id: 5,
+    id: 6,
     currentPrice: 20,
     currency: '€',
     stars: 4.6,
@@ -267,7 +295,7 @@ const pickedData = [
       'https://cdn-imgix.headout.com/tour/13905/TOUR-IMAGE/b23dc05c-1b19-4eb4-a205-fb9f0f2e29ab-7654-paris-Palace-of-Versailles-All-Access-Passport-Entry-with-Audioguide-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
   },
   {
-    id: 6,
+    id: 7,
     currentPrice: 31,
     lastPrice: 45,
     currency: '€',
