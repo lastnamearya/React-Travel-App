@@ -63,7 +63,8 @@ class PickedSlider extends React.Component {
               currentPrice,
               ratings,
               stars,
-              discount
+              discount,
+              cashback
             }) => (
               <ExperienceCard
                 key={id}
@@ -75,6 +76,7 @@ class PickedSlider extends React.Component {
                 ratings={ratings}
                 stars={stars}
                 discount={discount}
+                cashback={cashback}
               />
             )
           )}
@@ -87,6 +89,7 @@ class ExperienceCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
     const discount = this.props.discount;
+    const cashback = this.props.cashback;
     return (
       <div className="exp-card">
         <div
@@ -94,7 +97,13 @@ class ExperienceCard extends Component {
           style={{
             backgroundImage: url
           }}
-        />
+        >
+          {cashback ? (
+            <div className="cashback">
+              <p>{`${this.props.cashback}% cashback`}</p>
+            </div>
+          ) : null}
+        </div>
         <div className="exp-content-wrap">
           <div className="exp-info-wrap">
             <p id="exp-city">{this.props.city}</p>
@@ -175,6 +184,7 @@ const pickedData = [
     currency: '$',
     stars: 4.6,
     ratings: 564,
+    cashback: 10,
     city: 'NEW YORK',
     description: 'Aladdin',
     url:
@@ -187,6 +197,7 @@ const pickedData = [
     discount: 16,
     stars: 4.6,
     ratings: 2588,
+    cashback: 5,
     city: 'DUBAI',
     description: 'Burj Khalifa: At the Top (Level 124 & 125)',
     url:
@@ -199,6 +210,7 @@ const pickedData = [
     discount: 8,
     stars: 4.6,
     ratings: 1240,
+    cashback: 5,
     city: 'DUBAI',
     description: 'Dubai Acquarium & Underwater Zoo + Burj Khalifa Combo',
     url:
@@ -223,6 +235,7 @@ const pickedData = [
     discount: 31,
     stars: 4.6,
     ratings: 474,
+    cashback: 10,
     city: 'PARIS',
     description: 'Skip The Line: Eiffel Tower Tickets with Host',
     url:
