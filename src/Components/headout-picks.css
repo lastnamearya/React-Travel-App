@@ -218,6 +218,12 @@
   margin: 0px;
 }
 
+#last-price {
+  font-size: 13px;
+  padding: 1px 0px;
+  text-decoration: line-through;
+}
+
 #price {
   color: #545454;
   font-size: 19.8px;

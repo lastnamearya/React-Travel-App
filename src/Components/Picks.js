@@ -64,7 +64,8 @@ class PickedSlider extends React.Component {
               ratings,
               stars,
               discount,
-              cashback
+              cashback,
+              lastPrice
             }) => (
               <ExperienceCard
                 key={id}
@@ -77,6 +78,7 @@ class PickedSlider extends React.Component {
                 stars={stars}
                 discount={discount}
                 cashback={cashback}
+                lastPrice={lastPrice}
               />
             )
           )}
@@ -91,6 +93,7 @@ class ExperienceCard extends Component {
     const discount = this.props.discount;
     const cashback = this.props.cashback;
     const currency = this.props.currency;
+    const lastPrice = this.props.lastPrice;
     return (
       <div className="exp-card">
         <div
@@ -137,6 +140,16 @@ class ExperienceCard extends Component {
               </div>
               <div className="price">
                 <p>from</p>
+                {lastPrice && this.props.city === 'DUBAI' ? (
+                  <p id="last-price">{`${this.props.currency} ${
+                    this.props.lastPrice
+                  }`}</p>
+                ) : null}
+                {lastPrice && this.props.city !== 'DUBAI' ? (
+                  <p id="last-price">{`${this.props.currency}${
+                    this.props.lastPrice
+                  }`}</p>
+                ) : null}
                 {currency === 'AED' ? (
                   <p id="price">{`${this.props.currency} ${
                     this.props.price
@@ -206,6 +219,7 @@ const pickedData = [
   {
     id: 3,
     currentPrice: 141,
+    lastPrice: 146,
     currency: 'AED',
     discount: 16,
     stars: 4.6,
@@ -219,6 +233,7 @@ const pickedData = [
   {
     id: 4,
     currentPrice: 196,
+    lastPrice: 206,
     currency: 'AED',
     discount: 8,
     stars: 4.6,
@@ -244,6 +259,7 @@ const pickedData = [
   {
     id: 6,
     currentPrice: 31,
+    lastPrice: 45,
     currency: '€',
     discount: 31,
     stars: 4.6,
