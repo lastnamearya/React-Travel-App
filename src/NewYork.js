@@ -91,7 +91,8 @@ const CitySection = ({ headline, description, cardsData }) => (
             cashback,
             lastPrice,
             about,
-            showMore
+            showMore,
+            highlight
           }) => (
             <ExperienceCard
               key={id}
@@ -107,6 +108,7 @@ const CitySection = ({ headline, description, cardsData }) => (
               cashback={cashback}
               lastPrice={lastPrice}
               showMore={showMore}
+              highlight={highlight}
             />
           )
         )}
@@ -761,96 +763,101 @@ const AllNewYorkCityData = [
     sectionData: [
       {
         id: 1,
-        currentPrice: 62.5,
+        currentPrice: 37,
+        lastPrice: 39.2,
         currency: '$',
-        stars: 4.6,
-        ratings: 564,
+        stars: 4.9,
+        ratings: 533,
         cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: 'Aladdin',
+        about: 'TOP OF THE ROCK',
+        description: 'Top of the Rock Observation Deck: Flexible Date Tickets',
         url:
-          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/751/TOUR-IMAGE/5a1a9e72-a128-4912-90d5-b2c78e83ee42-ny-attractions-top-of-the-rock-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 2,
-        currentPrice: 29,
+        currentPrice: 32,
         lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 681,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Phantom of the Opera`,
+        stars: 4.9,
+        ratings: 311,
+        cashback: null,
+        discount: 20,
+        highlight: `NEW ARRIVAL`,
+        about: 'MUESEUMS',
+        description: `Ripley's Believe It or Not with Admission to Relic`,
         url:
-          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/1283/TOUR-IMAGE/c73e4b94-16f2-4514-9cde-2e6a0097b46e-image-1-.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 3,
-        currentPrice: 40.5,
-        lastPrice: 79,
+        currentPrice: 21.5,
+        lastPrice: 23,
         currency: '$',
-        stars: null,
-        ratings: null,
+        stars: 5.0,
+        ratings: 331,
         cashback: null,
-        discount: 49,
-        about: 'BROADWAY SHOW TICKETS',
-        description: `King Kong - Broadway Week Discount`,
+        discount: 6,
+        about: 'MUSEUMS',
+        description: `American Mueseum of Natural History`,
         url:
-          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/881/image/1-american-museum-of-natural-history-dinasouredit.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 4,
-        currentPrice: 99,
+        currentPrice: 25,
         lastPrice: null,
         currency: '$',
-        stars: 4.7,
-        ratings: 347,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Lion King`,
+        stars: 4.8,
+        ratings: 448,
+        cashback: null,
+        about: 'MUESUMS',
+        highlight: `BEST SELLER`,
+        description: `Skip the Line Tickets to Meuseum of Modern Art (MoMA)`,
         url:
-          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/729/TOUR-IMAGE/d796f45b-bc23-44ea-8a1f-533b03cdf3b2-598-new-york-museum-of-modern-art-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 5,
-        currentPrice: 89,
+        currentPrice: 26,
         lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 561,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `Wicked`,
+        stars: 4.8,
+        ratings: 660,
+        cashback: null,
+        about: 'MEUSEUMS',
+        highlight: `BEST SELLER`,
+        description: `9/11 Memorial & Meuseum Admission: Skip the Ticket Line`,
         url:
-          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/679/TOUR-IMAGE/73bed395-11c9-4fb8-85a5-5231279d4706-549-new-york-911-memorial-museum-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 6,
-        currentPrice: 49,
-        lastPrice: 79,
+        currentPrice: 37,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 322,
-        cashback: 15,
-        discount: 50,
-        about: 'BROADWAY MUSICALS',
-        description: `Waitress`,
+        stars: 4.9,
+        ratings: 752,
+        cashback: 10,
+        discount: null,
+        about: 'EMPIRE STATE BUILDING',
+        description: `Empire State Building Observatory Tickets`,
         url:
-          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/724/TOUR-IMAGE/42c90752-9142-4e81-97ea-f86bba64081b-593-new-york-skip-the-line-empire-state-building-observatory-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 7,
-        currentPrice: 69,
-        lastPrice: 79,
+        currentPrice: 31,
+        lastPrice: 38,
         currency: '$',
-        stars: 4.6,
-        ratings: 274,
-        cashback: 10,
-        discount: 46,
-        about: 'BROADWAY MUSICALS',
-        description: `Anastasia`,
+        stars: 5.0,
+        ratings: 400,
+        cashback: null,
+        discount: 18,
+        about: 'MEUSEUMS',
+        description: `Madame Tussauds New York with VIP Fast Track Access`,
         url:
-          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/1279/TOUR-IMAGE/4ff22af8-2b2a-40a1-92aa-a0b74c1aad95-901-new-york-madame-tussauds-new-york--skip-the-line-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 8,

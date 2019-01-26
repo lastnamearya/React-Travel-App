@@ -103,7 +103,8 @@ export class ExperienceCard extends Component {
       stars,
       city,
       about,
-      showMore
+      showMore,
+      highlight
     } = this.props;
 
     return (
@@ -123,6 +124,11 @@ export class ExperienceCard extends Component {
               {cashback ? (
                 <div className="cashback">
                   <p>{`${this.props.cashback}% cashback`}</p>
+                </div>
+              ) : null}
+              {highlight ? (
+                <div className="cashback">
+                  <p>{highlight}</p>
                 </div>
               ) : null}
               <div className="exp-heart">
