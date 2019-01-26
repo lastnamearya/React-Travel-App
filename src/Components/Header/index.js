@@ -10,9 +10,38 @@ class Header extends Component {
     experience: ''
   };
   changeExperience = event => this.setState({ experience: event.target.value });
-
   render() {
     const { backgroundImagesData } = this.props;
+    return (
+      <React.Fragment>
+        <HeaderNav
+          changeExperience={this.changeExperience}
+          experience={this.state.experience}
+        />
+        <Background backgroundImagesData={backgroundImagesData} />
+        <div className="search-bar-div">
+          <div className="select-city-large">
+            <i className="fas fa-map-marker" />
+            <Searchbar style={customStyles} />
+          </div>
+          <div className="select-experience-large">
+            <input
+              type="text"
+              placeholder="Search for experiences"
+              onChange={this.changeExperience}
+              value={this.state.experience}
+            />
+            <i className="fas fa-search" />
+          </div>
+          <button id="go">Let's Go</button>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
+
+export class HeaderNav extends Component {
+  render() {
     return (
       <div className="header-wrap">
         <div className="header-wrapper navbar-fixed-top">
@@ -30,7 +59,7 @@ class Header extends Component {
                     type="text"
                     placeholder="Search for experiences"
                     onChange={this.changeExperience}
-                    value={this.state.experience}
+                    value={this.props.experience}
                   />
                   <i className="fas fa-search" />
                 </div>
@@ -84,23 +113,6 @@ class Header extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <Background backgroundImagesData={backgroundImagesData} />
-        <div className="search-bar-div">
-          <div className="select-city-large">
-            <i className="fas fa-map-marker" />
-            <Searchbar style={customStyles} />
-          </div>
-          <div className="select-experience-large">
-            <input
-              type="text"
-              placeholder="Search for experiences"
-              onChange={this.changeExperience}
-              value={this.state.experience}
-            />
-            <i className="fas fa-search" />
-          </div>
-          <button id="go">Let's Go</button>
         </div>
       </div>
     );

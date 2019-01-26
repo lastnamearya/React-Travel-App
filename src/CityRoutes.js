@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainHome from './MainHome';
 import NewYork from './NewYork';
+import AppStore from './Components/AppStore';
 
 const CityRoutes = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const CityRoutes = () => (
       <Route exact path="/cities/budapest" component={MainHome} />
       <Route exact path="/cities/edinburg" component={MainHome} />
       <Route exact path="/cities/florence" component={MainHome} />
+      <Route exact path="/app" component={AppStore} />
     </Switch>
   </BrowserRouter>
 );
