@@ -13,7 +13,7 @@
 .cards-wrapper {
   display: flex;
   width: 1152px;
-  height: 1152px;
+  height: auto;
   margin: 35px auto;
   flex-wrap: wrap;
 }

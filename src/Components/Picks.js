@@ -67,11 +67,13 @@ class PickedSlider extends React.Component {
               stars,
               discount,
               cashback,
-              lastPrice
+              lastPrice,
+              about
             }) => (
               <ExperienceCard
                 key={id}
                 city={city}
+                about={about}
                 url={url}
                 description={description}
                 currency={currency}
@@ -98,7 +100,9 @@ class ExperienceCard extends Component {
       currency,
       lastPrice,
       ratings,
-      stars
+      stars,
+      city,
+      about
     } = this.props;
 
     return (
@@ -117,8 +121,17 @@ class ExperienceCard extends Component {
         </div>
         <div className="exp-content-wrap">
           <div className="exp-info-wrap">
-            <p id="exp-city">{this.props.city}</p>
-            <p id="exp-description">{this.props.description}</p>
+            {city ? (
+              <React.Fragment>
+                <p id="exp-city">{city}</p>
+                <p id="exp-description">{this.props.description}</p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p id="exp-about">{about}</p>
+                <p id="exp-description">{this.props.description}</p>
+              </React.Fragment>
+            )}
           </div>
           <div>
             <div className="price-section">
@@ -139,7 +152,7 @@ class ExperienceCard extends Component {
                   {stars ? (
                     <div className="stars">
                       <p id="stars-p">
-                        {this.props.stars}
+                        {parseFloat(Math.round(stars * 100) / 100).toFixed(1)}
                         <span id="star"> &#9733;</span>
                       </p>
                     </div>
@@ -159,7 +172,11 @@ class ExperienceCard extends Component {
                     </div>
                   )}
                   {ratings ? (
-                    <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
+                    ratings === 1 ? (
+                      <p id="ratings">{`(${this.props.ratings} Rating)`}</p>
+                    ) : (
+                      <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
+                    )
                   ) : (
                     <p id="ratings">Newly Arrived</p>
                   )}
