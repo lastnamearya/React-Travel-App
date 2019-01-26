@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import './background.css';
 
-class HeaderTest extends React.Component {
+class BackgroundCaraousel extends React.Component {
   render() {
     var settings = {
       dots: true,
@@ -17,22 +17,32 @@ class HeaderTest extends React.Component {
       autoplay: true,
       autoplaySpeed: 3000
     };
+    const { backgroundImagesData } = this.props;
     return (
       <div className="slider-div">
         <Slider {...settings}>
-          <DivOne />
-          <DivTwo />
-          <DivThree />
+          {backgroundImagesData &&
+            backgroundImagesData.map(({ id, url }) => (
+              <BackgroundImageDiv key={id} url={url} />
+            ))}
         </Slider>
       </div>
     );
   }
 }
 
-const DivOne = () => <div className="div-one" />;
+class BackgroundImageDiv extends Component {
+  render() {
+    const url = `url(${this.props.url})`;
+    return (
+      <div
+        className="background-image-div"
+        style={{
+          backgroundImage: url
+        }}
+      />
+    );
+  }
+}
 
-const DivTwo = () => <div className="div-two" />;
-
-const DivThree = () => <div className="div-three" />;
-
-export default HeaderTest;
+export default BackgroundCaraousel;

@@ -12,6 +12,7 @@ class Header extends Component {
   changeExperience = event => this.setState({ experience: event.target.value });
 
   render() {
+    const { backgroundImagesData } = this.props;
     return (
       <div className="header-wrap">
         <div className="header-wrapper navbar-fixed-top">
@@ -84,7 +85,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <Background />
+        <Background backgroundImagesData={backgroundImagesData} />
         <div className="search-bar-div">
           <div className="select-city-large">
             <i className="fas fa-map-marker" />

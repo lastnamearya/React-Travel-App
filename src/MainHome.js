@@ -42,7 +42,7 @@ class MainHome extends Component {
     } else {
       return (
         <div className="App">
-          <Header />
+          <Header backgroundImagesData={backgroundImagesData} />
           <p id="external">
             <span role="img" aria-label="Warn">
               🙏
@@ -63,5 +63,23 @@ class MainHome extends Component {
     }
   }
 }
+
+const backgroundImagesData = [
+  {
+    id: 1,
+    url:
+      'https://cdn-imgix-open.headout.com/desktop-flaps/cashback-01.jpg?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  },
+  {
+    id: 2,
+    url:
+      'https://cdn-imgix-open.headout.com/desktop-flaps/about-01-01.jpg?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  },
+  {
+    id: 3,
+    url:
+      'https://cdn-imgix-open.headout.com/flaps/non-city-specific/desktop/experience-desktop.png?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  }
+];
 
 export default MainHome;
