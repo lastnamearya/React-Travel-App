@@ -61,7 +61,7 @@
   height: 297px;
   position: relative;
   box-shadow: -1px 4px 20px -3px rgba(80, 79, 79, 0.3);
-  margin: 10px auto;
+  margin: 10px 10px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;

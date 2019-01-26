@@ -1,0 +1,26 @@
+.new-york-wrapper {
+  text-align: center;
+}
+
+.travel-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0px 20px;
+}
+
+/* Media Queries */
+
+/* @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .new-york-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .new-york-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+} */

@@ -5,17 +5,30 @@ import Collections from './Components/Collections';
 import Download from './Components/Download';
 import Media from './Components/Media';
 import Footer from './Components/footer';
+import { ExperienceCard } from './Components/Picks';
+import './new-york.css';
 
 class NewYork extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="new-york-wrapper">
         <Header backgroundImagesData={backgroundImagesData} />
         <TopPicks
           headline={'Top Experiences in New York'}
           pickedData={NewYorkData}
         />
         <Collections collectionsData={collectionsData} />
+        {AllNewYorkCityData &&
+          AllNewYorkCityData.map(
+            ({ id, headline, description, sectionData }) => (
+              <CitySection
+                key={id}
+                headline={headline}
+                description={description}
+                cardsData={sectionData}
+              />
+            )
+          )}
         <Download />
         <Media />
         <Footer />
@@ -23,6 +36,80 @@ class NewYork extends Component {
     );
   }
 }
+
+const CitySection = ({ headline, description, cardsData }) => (
+  <div
+    className="city-section-wrapper"
+    style={{
+      width: '85%',
+      margin: '0 auto',
+      paddingTop: '35px'
+    }}
+  >
+    <h2
+      style={{
+        textAlign: 'left'
+      }}
+    >
+      {headline}
+    </h2>
+    <hr
+      style={{
+        backgroundColor: '#ffbb58',
+        width: '75px',
+        height: '2px',
+        border: 'none',
+        marginTop: '0px',
+        marginLeft: '0px',
+        marginBottom: '10px'
+      }}
+    />
+    <p
+      style={{
+        color: '#545454',
+        fontSize: '15.3px',
+        marginTop: '0px',
+        textAlign: 'left'
+      }}
+    >
+      {description}
+    </p>
+    <div className="travel-card-wrapper">
+      {cardsData &&
+        cardsData.map(
+          ({
+            id,
+            city,
+            url,
+            description,
+            currency,
+            currentPrice,
+            ratings,
+            stars,
+            discount,
+            cashback,
+            lastPrice,
+            about
+          }) => (
+            <ExperienceCard
+              key={id}
+              city={city}
+              about={about}
+              url={url}
+              description={description}
+              currency={currency}
+              price={currentPrice}
+              ratings={ratings}
+              stars={stars}
+              discount={discount}
+              cashback={cashback}
+              lastPrice={lastPrice}
+            />
+          )
+        )}
+    </div>
+  </div>
+);
 
 // New York Caraousel Images
 
@@ -56,6 +143,718 @@ const backgroundImagesData = [
     id: 6,
     url:
       'https://cdn-imgix-open.headout.com/flaps/non-city-specific/desktop/experience-desktop.png?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  }
+];
+
+// All New York City Sections Data ~ nested ( Dynamically Rendering )
+
+const AllNewYorkCityData = [
+  {
+    id: 1,
+    headline: 'Broadway Show Tickets',
+    description:
+      'Stay up to date on the season’s hottest shows and score amazing discounts and offers for the most popular entertainment attraction in the world',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 2,
+    headline: 'City Walks',
+    description:
+      'Discover what makes New York one of the most visited places in the world with these stunning NYC sightseeing tours. You will not only get to visit these popular landmarks, but also learn about the history and get to hear stories about the city’s past as well',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 3,
+    headline: 'Food and Drinks',
+    description:
+      'Get a taste of New York’s truly global culture with these delicious food tours of New York. Whether you’re looking for the best New York pizza or fancy the best craft beer from the east coast, these food and culinary tours of New York will be perfect for you',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 4,
+    headline: 'NYC Tours',
+    description:
+      'With a range of tours catering to different parts of the city, you get the chance to see some of the major attractions. Check out our list of New York Bus Tours to know more',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 5,
+    headline: 'Entertainment',
+    description:
+      'Check out some of the hottest events happening in and around New York City. From tickets for a Knicks game at Madison Square Garden to a beautiful Broadway experience, these are some of the best events happening in New York at the moment',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 6,
+    headline: 'New York City Passes',
+    description:
+      'Explore New York in a flexible and cost-effective manner with these city passes! Choose the New York Pass for unlimited access to attractions during a set number of days. For those who want to visit a set number of attractions, we recommend the New York Explorer Pass, which lets you pick the number of attractions to visit and then explore at your own pace and convenience!',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
+  },
+  {
+    id: 7,
+    headline: 'NYC 101',
+    description:
+      'From museums that offer knowledge about art and history to high rise buildngs and structures, New York attractions have it all. Have a look at these products to know more.',
+    sectionData: [
+      {
+        id: 1,
+        currentPrice: 62.5,
+        currency: '$',
+        stars: 4.6,
+        ratings: 564,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: 'Aladdin',
+        url:
+          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 29,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 681,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Phantom of the Opera`,
+        url:
+          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 40.5,
+        lastPrice: 79,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 49,
+        about: 'BROADWAY SHOW TICKETS',
+        description: `King Kong - Broadway Week Discount`,
+        url:
+          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 4,
+        currentPrice: 99,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.7,
+        ratings: 347,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `The Lion King`,
+        url:
+          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 5,
+        currentPrice: 89,
+        lastPrice: null,
+        currency: '$',
+        stars: 4.6,
+        ratings: 561,
+        cashback: 10,
+        about: 'BROADWAY MUSICALS',
+        description: `Wicked`,
+        url:
+          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 6,
+        currentPrice: 49,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 322,
+        cashback: 15,
+        discount: 50,
+        about: 'BROADWAY MUSICALS',
+        description: `Waitress`,
+        url:
+          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 7,
+        currentPrice: 69,
+        lastPrice: 79,
+        currency: '$',
+        stars: 4.6,
+        ratings: 274,
+        cashback: 10,
+        discount: 46,
+        about: 'BROADWAY MUSICALS',
+        description: `Anastasia`,
+        url:
+          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      }
+    ]
   }
 ];
 

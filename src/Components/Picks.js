@@ -91,7 +91,7 @@ class PickedSlider extends React.Component {
   }
 }
 
-class ExperienceCard extends Component {
+export class ExperienceCard extends Component {
   render() {
     const url = `url(${this.props.url})`;
     const {
