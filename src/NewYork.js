@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/index';
+import Download from './Components/Download';
 import Media from './Components/Media';
 import Footer from './Components/footer';
 
@@ -8,6 +9,7 @@ class NewYork extends Component {
     return (
       <div>
         <Header backgroundImagesData={backgroundImagesData} />
+        <Download />
         <Media />
         <Footer />
       </div>

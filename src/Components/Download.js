@@ -19,16 +19,31 @@ const Download = () => (
             width: '75px',
             height: '2px',
             border: 'none',
-            marginTop: '0px'
+            marginTop: '0px',
+            marginBottom: '0px'
           }}
         />
-        <p>
-          Download our mobile app for easier & faster checkout. We can send you
-          the download link to get started right away!
-        </p>
         <div>
-          <img src={Appstoreimg} alt="Apple Store" className="store" />
-          <img src={Playstoreimg} alt="Google Play Store" className="store" />
+          <p id="downloads-info">
+            Download our mobile app for easier & faster checkout. <br />
+            We can send you the download link to get started right away!
+          </p>
+        </div>
+        <div className="download-links">
+          <a
+            href="https://itunes.apple.com/us/app/tourlandish/id899327000?ls=1&mt=8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Appstoreimg} alt="Apple Store" className="store" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.tourlandish.chronos&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Playstoreimg} alt="Google Play Store" className="store" />
+          </a>
         </div>
       </div>
       <div className="android">

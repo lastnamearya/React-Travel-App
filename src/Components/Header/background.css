@@ -13,7 +13,6 @@
 .slick-dots {
   top: 375px;
   position: absolute;
-  z-index: 100;
 }
 
 /* Media Queries */

@@ -49,6 +49,7 @@ h2 {
 .news-box {
   width: 225px;
   margin: 0 35px;
+  text-align: center;
 }
 
 .ratings {

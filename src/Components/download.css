@@ -5,7 +5,8 @@
 .download-wrapper {
   padding-top: 60px;
   display: flex;
-  width: 70%;
+  justify-content: space-between;
+  width: 65%;
   margin: 0px auto;
 }
 
@@ -16,8 +17,24 @@
   margin-bottom: 15px;
 }
 
+#downloads-info {
+  margin-bottom: 35px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.download-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-links img {
+  margin: 0 3px;
+}
+
 .download-section h2 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .download-section p {
