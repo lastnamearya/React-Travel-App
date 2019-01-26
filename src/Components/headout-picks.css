@@ -94,6 +94,21 @@
   bottom: -1em;
 }
 
+.exp-heart i {
+  color: #f43361;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-weight: 400;
+  transition: transform 0.3s ease-in-out;
+}
+
+.exp-heart i:hover {
+  font-weight: 700;
+  transform: scale(1.15);
+}
+
 .cashback p {
   font-size: 9px;
   padding: 5px 0px;

@@ -118,6 +118,9 @@ class ExperienceCard extends Component {
               <p>{`${this.props.cashback}% cashback`}</p>
             </div>
           ) : null}
+          <div className="exp-heart">
+            <i className="far fa-heart" />
+          </div>
         </div>
         <div className="exp-content-wrap">
           <div className="exp-info-wrap">
