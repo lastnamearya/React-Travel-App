@@ -195,7 +195,7 @@ function Left(props) {
   const { style, onClick } = props;
   return (
     <div
-      className="slick-arrow"
+      id="slick-arrow-left"
       style={{ ...style, display: 'block' }}
       onClick={onClick}
     >
@@ -208,7 +208,7 @@ function Right(props) {
   const { style, onClick } = props;
   return (
     <div
-      className="slick-arrow-right"
+      id="slick-arrow-right"
       style={{ ...style, display: 'block' }}
       onClick={onClick}
     >

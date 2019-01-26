@@ -145,7 +145,7 @@
 
 /* Caraousel Arrows */
 
-.slick-arrow {
+#slick-arrow {
   position: absolute;
   z-index: 100;
   font-size: 18px;
@@ -160,7 +160,7 @@
   cursor: pointer;
 }
 
-.slick-arrow:hover {
+#slick-arrow:hover {
   color: #4fc3f7;
 }
 
@@ -168,7 +168,7 @@
   padding-top: 10px;
 }
 
-.slick-arrow-right {
+#slick-arrow-right {
   position: absolute;
   z-index: 100;
   font-size: 18px;
@@ -183,7 +183,7 @@
   cursor: pointer;
 }
 
-.slick-arrow-right:hover {
+#slick-arrow-right:hover {
   color: #4fc3f7;
 }
 
