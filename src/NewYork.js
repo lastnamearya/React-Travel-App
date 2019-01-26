@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/index';
+import Media from './Components/Media';
+import Footer from './Components/footer';
 
 class NewYork extends Component {
   render() {
     return (
       <div>
         <Header backgroundImagesData={backgroundImagesData} />
+        <Media />
+        <Footer />
       </div>
     );
   }
