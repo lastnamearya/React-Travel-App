@@ -513,94 +513,99 @@ const AllNewYorkCityData = [
         currentPrice: 33,
         lastPrice: 35,
         currency: '$',
-        stars: 4.6,
-        ratings: 564,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: 'Aladdin',
+        stars: 5.0,
+        ratings: 3,
+        cashback: null,
+        discount: 5,
+        about: 'NYC TOURS',
+        description: 'The Tour - The Ride',
         url:
-          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/667/TOUR-IMAGE/f654eef0-7306-4ec1-8f69-acad8e28ee80-537-new-york-the-tour---the-ride-02.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 2,
-        currentPrice: 29,
-        lastPrice: null,
+        currentPrice: 86,
+        lastPrice: 89,
         currency: '$',
-        stars: 4.6,
-        ratings: 681,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Phantom of the Opera`,
+        stars: 4.9,
+        ratings: 1587,
+        cashback: null,
+        discount: 3,
+        highlight: `SAVE UP To 50%`,
+        about: 'NEW YORK EXPLORER PASS',
+        description: 'New York Explorer Pass - 3 Attractions',
         url:
-          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/2477/TOUR-IMAGE/1f7514ef-73b3-4a51-8510-3e5ba6528318-1739-new-york-nyc-explorer-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 3,
-        currentPrice: 40.5,
-        lastPrice: 79,
+        currentPrice: 134.4,
+        lastPrice: 168,
         currency: '$',
         stars: null,
         ratings: null,
         cashback: null,
-        discount: 49,
-        about: 'BROADWAY SHOW TICKETS',
-        description: `King Kong - Broadway Week Discount`,
+        discount: 20,
+        about: 'NYC TOURS',
+        description: `New York in a Day`,
         url:
-          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/16150/TOUR-IMAGE/e00a5d3a-a3ec-4f7d-8fd8-de95beae9af5-8964-new-york-in-a-day-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 4,
-        currentPrice: 99,
-        lastPrice: null,
+        currentPrice: 51,
+        lastPrice: 54,
         currency: '$',
-        stars: 4.7,
-        ratings: 347,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Lion King`,
+        stars: null,
+        ratings: null,
+        discount: 5,
+        about: 'NYC TOURS',
+        description: `The Downtown Experience - The Ride`,
         url:
-          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/14354/TOUR-IMAGE/bbe86169-096f-48a4-97e8-4c2262340874-7836-new-york-the-downtown-experience---the-ride-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 5,
-        currentPrice: 89,
-        lastPrice: null,
+        currentPrice: 35,
+        lastPrice: 38,
         currency: '$',
-        stars: 4.6,
-        ratings: 561,
+        stars: 4.4,
+        ratings: 61,
         cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `Wicked`,
+        discount: 7,
+        about: 'ONE WORLD OBSERVATORY',
+        description: `One World Observatory Priority Entrance Tickets`,
         url:
-          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/5568/TOUR-IMAGE/185a0227-2f26-4fb5-bd06-dfa5fede78a8-ny-attractions-one-world-observatory-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 6,
-        currentPrice: 49,
-        lastPrice: 79,
+        currentPrice: 124,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 322,
-        cashback: 15,
-        discount: 50,
-        about: 'BROADWAY MUSICALS',
-        description: `Waitress`,
+        stars: 4.8,
+        ratings: 986,
+        cashback: null,
+        discount: null,
+        highlight: `SAVE UP TO $103`,
+        about: 'THE NEW WORK PASS',
+        description: `New York Unlimited Attraction Pass - 1 Day`,
         url:
-          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/1816/TOUR-IMAGE/5d6da19b-0a01-4609-8fc2-6919972d9dcd-1294-new-york-1-day-new-york-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 7,
         currentPrice: 69,
-        lastPrice: 79,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 274,
-        cashback: 10,
-        discount: 46,
-        about: 'BROADWAY MUSICALS',
-        description: `Anastasia`,
+        stars: 4.8,
+        ratings: 761,
+        cashback: 5,
+        discount: null,
+        about: 'The SIGHTSEEING PASS',
+        description: `FreeStyle Attraction Pass with Hop-On Hop-Off Cruise`,
         url:
-          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/16543/TOUR-IMAGE/4a07f498-91fd-4bad-b329-8d0a0efda2be-9173-new-york-freestyle--cruise-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 8,
@@ -662,96 +667,102 @@ const AllNewYorkCityData = [
     sectionData: [
       {
         id: 1,
-        currentPrice: 62.5,
+        currentPrice: 86,
+        lastPrice: 89,
         currency: '$',
-        stars: 4.6,
-        ratings: 564,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: 'Aladdin',
+        stars: 4.9,
+        ratings: 1587,
+        cashback: null,
+        highlight: `SAVE UP To 50%`,
+        about: 'NEW YORK EXPLORER PASS',
+        description: 'New York Explorer Pass - 3 Attractions',
         url:
-          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/2477/TOUR-IMAGE/1f7514ef-73b3-4a51-8510-3e5ba6528318-1739-new-york-nyc-explorer-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 2,
-        currentPrice: 29,
+        currentPrice: 119,
         lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 681,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Phantom of the Opera`,
+        stars: 4.9,
+        ratings: 828,
+        cashback: null,
+        highlight: `BEST SELLER`,
+        about: 'NEW YORK EXPLORER PASS',
+        description: `New York Explorer Pass - 4 Attractions`,
         url:
-          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/17250/TOUR-IMAGE/d8b181dc-7748-4329-a6b8-0a6911fd19f9-9513-new-york-4-attraction-new-york-explorer-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 3,
-        currentPrice: 40.5,
-        lastPrice: 79,
+        currentPrice: 134,
+        lastPrice: null,
         currency: '$',
-        stars: null,
-        ratings: null,
+        stars: 4.9,
+        ratings: 809,
         cashback: null,
-        discount: 49,
-        about: 'BROADWAY SHOW TICKETS',
-        description: `King Kong - Broadway Week Discount`,
+        highlight: `VALUE FOR MONEY`,
+        discount: null,
+        about: 'NEW YORK EXPLORER PASS',
+        description: `New York Explorer Pass - 5 Attractions`,
         url:
-          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/17251/TOUR-IMAGE/d1cc2347-b395-4026-b6eb-d455261453d5-9514-new-york-5-attraction-new-york-explorer-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 4,
-        currentPrice: 99,
+        currentPrice: 124,
         lastPrice: null,
         currency: '$',
-        stars: 4.7,
-        ratings: 347,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Lion King`,
+        stars: 4.8,
+        ratings: 986,
+        cashback: null,
+        about: 'NEW YORK PASS',
+        description: `New York Unlimited Attraction Pass - 1 Day`,
         url:
-          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/1816/TOUR-IMAGE/5d6da19b-0a01-4609-8fc2-6919972d9dcd-1294-new-york-1-day-new-york-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 5,
-        currentPrice: 89,
+        currentPrice: 189,
         lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 561,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `Wicked`,
+        stars: 4.9,
+        ratings: 588,
+        cashback: null,
+        highlight: `SAVE UP TO $10`,
+        about: 'NEW YORK PASS',
+        description: `New York Unlimited Attraction Pass - 2 Days`,
         url:
-          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/17275/TOUR-IMAGE/fd9e371e-303c-4a34-a695-ef2089b54c0e-9534-new-york-2-day-new-york-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 6,
-        currentPrice: 49,
-        lastPrice: 79,
+        currentPrice: 159,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 322,
-        cashback: 15,
-        discount: 50,
-        about: 'BROADWAY MUSICALS',
-        description: `Waitress`,
+        stars: 4.8,
+        ratings: 881,
+        cashback: null,
+        highlight: `MUST VISIT`,
+        discount: null,
+        about: 'The SIGHTSEEING PASS',
+        description: `FreeStyle Attraction Pass with Hop-On Hop-Off Bus and Cruise`,
         url:
-          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/3534/TOUR-IMAGE/fc281323-cedc-4d4d-b931-eff48a0c03d6-2360-new-york-freestyle-new-york-city-pass--attractions---hop-on-hop-off-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 7,
         currentPrice: 69,
-        lastPrice: 79,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 274,
-        cashback: 10,
-        discount: 46,
-        about: 'BROADWAY MUSICALS',
-        description: `Anastasia`,
+        stars: 4.8,
+        ratings: 761,
+        cashback: 5,
+        discount: null,
+        about: 'The SIGHTSEEING PASS',
+        description: `FreeStyle Attraction Pass with Hop-On Hop-Off Cruise`,
         url:
-          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/16543/TOUR-IMAGE/4a07f498-91fd-4bad-b329-8d0a0efda2be-9173-new-york-freestyle--cruise-pass-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       }
     ]
   },
