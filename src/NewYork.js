@@ -391,96 +391,97 @@ const AllNewYorkCityData = [
     sectionData: [
       {
         id: 1,
-        currentPrice: 62.5,
-        currency: '$',
-        stars: 4.6,
-        ratings: 564,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: 'Aladdin',
-        url:
-          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 2,
-        currentPrice: 29,
-        lastPrice: null,
-        currency: '$',
-        stars: 4.6,
-        ratings: 681,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Phantom of the Opera`,
-        url:
-          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 3,
-        currentPrice: 40.5,
-        lastPrice: 79,
+        currentPrice: 61,
+        lastPrice: 70,
         currency: '$',
         stars: null,
         ratings: null,
         cashback: null,
-        discount: 49,
-        about: 'BROADWAY SHOW TICKETS',
-        description: `King Kong - Broadway Week Discount`,
+        discount: 12,
+        about: 'FOOD AND DRINKS',
+        description: 'Tenements, Tales & Tastes',
         url:
-          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/4280/TOUR-IMAGE/ec8f7c1c-a3e9-4edb-b252-c85e55c05e2b-2767-new-york-tenements?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 2,
+        currentPrice: 60,
+        lastPrice: null,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        about: 'FOOD AND DRINKS',
+        description: `The Great Food Tour of New York`,
+        url:
+          'https://cdn-imgix.headout.com/tour/692/image/tourlandish--28.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 3,
+        currentPrice: 56,
+        lastPrice: 64,
+        currency: '$',
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 12,
+        about: 'FOOD AND DRINKS',
+        description: `Brownstone Brooklyn Eats`,
+        url:
+          'https://cdn-imgix.headout.com/tour/4278/image/2151606-origedit.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 4,
-        currentPrice: 99,
+        currentPrice: 82,
         lastPrice: null,
         currency: '$',
-        stars: 4.7,
-        ratings: 347,
+        stars: null,
+        ratings: null,
         cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Lion King`,
+        about: 'FOOD AND DRINKS',
+        description: `The Original Brooklyn Pizza`,
         url:
-          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/2873/image/1997-new-york-the-original-brooklyn-pizza-tour-03.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 5,
-        currentPrice: 89,
+        currentPrice: 50,
         lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 561,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `Wicked`,
+        stars: null,
+        ratings: null,
+        cashback: null,
+        about: 'FOOD AND DRINKS',
+        description: `Chinatown Food Tour`,
         url:
-          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/630/image/500ChinatownFoodTour1.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 6,
-        currentPrice: 49,
-        lastPrice: 79,
+        currentPrice: 72,
+        lastPrice: 82,
         currency: '$',
-        stars: 4.6,
-        ratings: 322,
-        cashback: 15,
-        discount: 50,
-        about: 'BROADWAY MUSICALS',
-        description: `Waitress`,
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: 12,
+        about: 'FOOD AND DRINKS',
+        description: `NY Craft Cocktail Tour`,
         url:
-          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/4281/TOUR-IMAGE/0e29c9d4-bda2-42f7-9a53-410f94233f19-2768-new-york-ny-craft-cocktail-tour-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 7,
-        currentPrice: 69,
-        lastPrice: 79,
+        currentPrice: 57,
+        lastPrice: null,
         currency: '$',
-        stars: 4.6,
-        ratings: 274,
-        cashback: 10,
-        discount: 46,
-        about: 'BROADWAY MUSICALS',
-        description: `Anastasia`,
+        stars: 5.0,
+        ratings: 1,
+        cashback: null,
+        about: 'NEW YORK CITY WALKING TOURS',
+        description: 'Chelsea Market Food and Culture Walking Tour',
         url:
-          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/2906/TOUR-IMAGE/4414a92f-1570-4b10-b05d-deaa5737d7f8-2005-ChelseaFoodTour-1-2-.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 8,
