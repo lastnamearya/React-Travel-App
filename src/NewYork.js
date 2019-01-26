@@ -89,7 +89,8 @@ const CitySection = ({ headline, description, cardsData }) => (
             discount,
             cashback,
             lastPrice,
-            about
+            about,
+            showMore
           }) => (
             <ExperienceCard
               key={id}
@@ -104,6 +105,7 @@ const CitySection = ({ headline, description, cardsData }) => (
               discount={discount}
               cashback={cashback}
               lastPrice={lastPrice}
+              showMore={showMore}
             />
           )
         )}
@@ -153,7 +155,7 @@ const AllNewYorkCityData = [
     id: 1,
     headline: 'Broadway Show Tickets',
     description:
-      'Stay up to date on the season’s hottest shows and score amazing discounts and offers for the most popular entertainment attraction in the world',
+      'Stay up to date on the season’s hottest shows and score amazing discounts and offers for the most popular entertainment attraction in the world.',
     sectionData: [
       {
         id: 1,
@@ -247,6 +249,20 @@ const AllNewYorkCityData = [
         description: `Anastasia`,
         url:
           'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+      },
+      {
+        id: 8,
+        showMore: true,
+        currentPrice: null,
+        lastPrice: null,
+        currency: null,
+        stars: null,
+        ratings: null,
+        cashback: null,
+        discount: null,
+        about: null,
+        description: null,
+        url: null
       }
     ]
   },
@@ -254,7 +270,7 @@ const AllNewYorkCityData = [
     id: 2,
     headline: 'City Walks',
     description:
-      'Discover what makes New York one of the most visited places in the world with these stunning NYC sightseeing tours. You will not only get to visit these popular landmarks, but also learn about the history and get to hear stories about the city’s past as well',
+      'Discover what makes New York one of the most visited places in the world with these stunning NYC sightseeing tours. You will not only get to visit these popular landmarks, but also learn about the history and get to hear stories about the city’s past as well.',
     sectionData: [
       {
         id: 1,
@@ -355,7 +371,7 @@ const AllNewYorkCityData = [
     id: 3,
     headline: 'Food and Drinks',
     description:
-      'Get a taste of New York’s truly global culture with these delicious food tours of New York. Whether you’re looking for the best New York pizza or fancy the best craft beer from the east coast, these food and culinary tours of New York will be perfect for you',
+      'Get a taste of New York’s truly global culture with these delicious food tours of New York. Whether you’re looking for the best New York pizza or fancy the best craft beer from the east coast, these food and culinary tours of New York will be perfect for you.',
     sectionData: [
       {
         id: 1,
@@ -456,7 +472,7 @@ const AllNewYorkCityData = [
     id: 4,
     headline: 'NYC Tours',
     description:
-      'With a range of tours catering to different parts of the city, you get the chance to see some of the major attractions. Check out our list of New York Bus Tours to know more',
+      'With a range of tours catering to different parts of the city, you get the chance to see some of the major attractions. Check out our list of New York Bus Tours to know more.',
     sectionData: [
       {
         id: 1,
@@ -557,7 +573,7 @@ const AllNewYorkCityData = [
     id: 5,
     headline: 'Entertainment',
     description:
-      'Check out some of the hottest events happening in and around New York City. From tickets for a Knicks game at Madison Square Garden to a beautiful Broadway experience, these are some of the best events happening in New York at the moment',
+      'Check out some of the hottest events happening in and around New York City. From tickets for a Knicks game at Madison Square Garden to a beautiful Broadway experience, these are some of the best events happening in New York at the moment.',
     sectionData: [
       {
         id: 1,

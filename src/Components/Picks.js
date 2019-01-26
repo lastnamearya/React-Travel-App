@@ -102,114 +102,128 @@ export class ExperienceCard extends Component {
       ratings,
       stars,
       city,
-      about
+      about,
+      showMore
     } = this.props;
 
     return (
       <div className="exp-card">
-        <div
-          className="exp-card-img"
-          style={{
-            backgroundImage: url
-          }}
-        >
-          {cashback ? (
-            <div className="cashback">
-              <p>{`${this.props.cashback}% cashback`}</p>
+        {showMore ? (
+          <div className="show-more">
+            <p>View All</p>
+          </div>
+        ) : (
+          <React.Fragment>
+            <div
+              className="exp-card-img"
+              style={{
+                backgroundImage: url
+              }}
+            >
+              {cashback ? (
+                <div className="cashback">
+                  <p>{`${this.props.cashback}% cashback`}</p>
+                </div>
+              ) : null}
+              <div className="exp-heart">
+                <i className="far fa-heart" />
+              </div>
             </div>
-          ) : null}
-          <div className="exp-heart">
-            <i className="far fa-heart" />
-          </div>
-        </div>
-        <div className="exp-content-wrap">
-          <div className="exp-info-wrap">
-            {city ? (
-              <React.Fragment>
-                <p id="exp-city">{city}</p>
-                <p id="exp-description">{this.props.description}</p>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                <p id="exp-about">{about}</p>
-                <p id="exp-description">{this.props.description}</p>
-              </React.Fragment>
-            )}
-          </div>
-          <div>
-            <div className="price-section">
-              <div className="div">
-                {discount ? (
-                  <div className="discount">
-                    <p>
-                      <span>
-                        <i className="fas fa-gift" />
-                      </span>
-                      {`upto ${this.props.discount}% off`}
-                    </p>
-                  </div>
+            <div className="exp-content-wrap">
+              <div className="exp-info-wrap">
+                {city ? (
+                  <React.Fragment>
+                    <p id="exp-city">{city}</p>
+                    <p id="exp-description">{this.props.description}</p>
+                  </React.Fragment>
                 ) : (
-                  <div className="discount" />
+                  <React.Fragment>
+                    <p id="exp-about">{about}</p>
+                    <p id="exp-description">{this.props.description}</p>
+                  </React.Fragment>
                 )}
-                <div className="ratings-section">
-                  {stars ? (
-                    <div className="stars">
-                      <p id="stars-p">
-                        {parseFloat(Math.round(stars * 100) / 100).toFixed(1)}
-                        <span id="star"> &#9733;</span>
-                      </p>
-                    </div>
-                  ) : (
-                    <div
-                      style={{
-                        width: '25px',
-                        height: '20px',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(340deg, #ffbb58, #f5c684)',
-                        paddingTop: '3px'
-                      }}
-                    >
-                      <p id="stars-p">
-                        <span> &#9733;</span>
-                      </p>
-                    </div>
-                  )}
-                  {ratings ? (
-                    ratings === 1 ? (
-                      <p id="ratings">{`(${this.props.ratings} Rating)`}</p>
+              </div>
+              <div>
+                <div className="price-section">
+                  <div className="div">
+                    {discount ? (
+                      <div className="discount">
+                        <p>
+                          <span>
+                            <i className="fas fa-gift" />
+                          </span>
+                          {`upto ${this.props.discount}% off`}
+                        </p>
+                      </div>
                     ) : (
-                      <p id="ratings">{`(${this.props.ratings} Ratings)`}</p>
-                    )
-                  ) : (
-                    <p id="ratings">Newly Arrived</p>
-                  )}
+                      <div className="discount" />
+                    )}
+                    <div className="ratings-section">
+                      {stars ? (
+                        <div className="stars">
+                          <p id="stars-p">
+                            {parseFloat(Math.round(stars * 100) / 100).toFixed(
+                              1
+                            )}
+                            <span id="star"> &#9733;</span>
+                          </p>
+                        </div>
+                      ) : (
+                        <div
+                          style={{
+                            width: '25px',
+                            height: '20px',
+                            borderRadius: '50%',
+                            background:
+                              'linear-gradient(340deg, #ffbb58, #f5c684)',
+                            paddingTop: '3px'
+                          }}
+                        >
+                          <p id="stars-p">
+                            <span> &#9733;</span>
+                          </p>
+                        </div>
+                      )}
+                      {ratings ? (
+                        ratings === 1 ? (
+                          <p id="ratings">{`(${this.props.ratings} Rating)`}</p>
+                        ) : (
+                          <p id="ratings">{`(${
+                            this.props.ratings
+                          } Ratings)`}</p>
+                        )
+                      ) : (
+                        <p id="ratings">Newly Arrived</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="price">
+                    <p>from</p>
+                    {lastPrice && this.props.city === 'DUBAI' ? (
+                      <p id="last-price">{`${this.props.currency} ${
+                        this.props.lastPrice
+                      }`}</p>
+                    ) : null}
+                    {lastPrice && this.props.city !== 'DUBAI' ? (
+                      <p id="last-price">{`${this.props.currency}${
+                        this.props.lastPrice
+                      }`}</p>
+                    ) : null}
+                    {currency === 'AED' ? (
+                      <p id="price">{`${this.props.currency} ${
+                        this.props.price
+                      }`}</p>
+                    ) : (
+                      <p id="price">{`${this.props.currency}${
+                        this.props.price
+                      }`}</p>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div className="price">
-                <p>from</p>
-                {lastPrice && this.props.city === 'DUBAI' ? (
-                  <p id="last-price">{`${this.props.currency} ${
-                    this.props.lastPrice
-                  }`}</p>
-                ) : null}
-                {lastPrice && this.props.city !== 'DUBAI' ? (
-                  <p id="last-price">{`${this.props.currency}${
-                    this.props.lastPrice
-                  }`}</p>
-                ) : null}
-                {currency === 'AED' ? (
-                  <p id="price">{`${this.props.currency} ${
-                    this.props.price
-                  }`}</p>
-                ) : (
-                  <p id="price">{`${this.props.currency}${
-                    this.props.price
-                  }`}</p>
-                )}
-              </div>
             </div>
-          </div>
-        </div>
+          </React.Fragment>
+        )}
       </div>
     );
   }
