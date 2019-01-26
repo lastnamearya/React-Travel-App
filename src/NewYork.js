@@ -69,7 +69,8 @@ const CitySection = ({ headline, description, cardsData }) => (
         color: '#545454',
         fontSize: '15.3px',
         marginTop: '0px',
-        textAlign: 'left'
+        textAlign: 'left',
+        lineHeight: '20px'
       }}
     >
       {description}
@@ -507,7 +508,8 @@ const AllNewYorkCityData = [
     sectionData: [
       {
         id: 1,
-        currentPrice: 62.5,
+        currentPrice: 33,
+        lastPrice: 35,
         currency: '$',
         stars: 4.6,
         ratings: 564,
@@ -622,96 +624,31 @@ const AllNewYorkCityData = [
     sectionData: [
       {
         id: 1,
-        currentPrice: 62.5,
+        currentPrice: 49.14,
+        lastPrice: 56,
         currency: '$',
-        stars: 4.6,
-        ratings: 564,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: 'Aladdin',
+        stars: 4.9,
+        ratings: 18,
+        cashback: null,
+        discount: 12,
+        about: 'CITY WALKS',
+        description: 'Sex and the City Tour',
         url:
-          'https://cdn-imgix.headout.com/tour/638/TOUR-IMAGE/d8da7ef3-6be5-4ab9-a88e-66a1cf8b5126-2.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/954/image/3.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       },
       {
         id: 2,
-        currentPrice: 29,
-        lastPrice: null,
-        currency: '$',
-        stars: 4.6,
-        ratings: 681,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Phantom of the Opera`,
-        url:
-          'https://cdn-imgix.headout.com/tour/652/TOUR-IMAGE/cd0fa708-27c2-4145-9fcf-14e84d910456-517-new-york-phantom-of-the-opera-00.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 3,
-        currentPrice: 40.5,
-        lastPrice: 79,
+        currentPrice: 49.14,
+        lastPrice: 56,
         currency: '$',
         stars: null,
         ratings: null,
         cashback: null,
-        discount: 49,
-        about: 'BROADWAY SHOW TICKETS',
-        description: `King Kong - Broadway Week Discount`,
+        discount: 12,
+        about: 'CITY WALKS',
+        description: `Gossip Girl Sites Tour`,
         url:
-          'https://cdn-imgix.headout.com/tour/18201/TOUR-IMAGE/a24bde23-2e32-49d4-bf14-b933fe60fe52-c817b2f3-194d-4fde-9ad8-fccbaf50ed31-9339-new-york-king-kong-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 4,
-        currentPrice: 99,
-        lastPrice: null,
-        currency: '$',
-        stars: 4.7,
-        ratings: 347,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `The Lion King`,
-        url:
-          'https://cdn-imgix.headout.com/tour/637/TOUR-IMAGE/0442ebf8-8ad3-4e1b-bb49-3b7dde81eb35-507-new-york-the-lion-king-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 5,
-        currentPrice: 89,
-        lastPrice: null,
-        currency: '$',
-        stars: 4.6,
-        ratings: 561,
-        cashback: 10,
-        about: 'BROADWAY MUSICALS',
-        description: `Wicked`,
-        url:
-          'https://cdn-imgix.headout.com/tour/647/TOUR-IMAGE/35c36ce6-af74-4fdb-a14f-a2f947f6c713-5.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 6,
-        currentPrice: 49,
-        lastPrice: 79,
-        currency: '$',
-        stars: 4.6,
-        ratings: 322,
-        cashback: 15,
-        discount: 50,
-        about: 'BROADWAY MUSICALS',
-        description: `Waitress`,
-        url:
-          'https://cdn-imgix.headout.com/tour/3559/TOUR-IMAGE/687350c0-17f9-424d-840a-4b02fad0a54e-2370-new-york-waitress-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
-      },
-      {
-        id: 7,
-        currentPrice: 69,
-        lastPrice: 79,
-        currency: '$',
-        stars: 4.6,
-        ratings: 274,
-        cashback: 10,
-        discount: 46,
-        about: 'BROADWAY MUSICALS',
-        description: `Anastasia`,
-        url:
-          'https://cdn-imgix.headout.com/tour/7573/TOUR-IMAGE/fa5af28b-c617-446d-a475-ced33c58c98d-4653-new-york-anastasia-01.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
+          'https://cdn-imgix.headout.com/tour/721/image/GossipGirls.PCP.jpg?auto=compress&fm=webp&w=510&h=315&crop=faces&fit=min'
       }
     ]
   },
