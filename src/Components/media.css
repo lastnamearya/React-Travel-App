@@ -41,7 +41,8 @@ h2 {
 
 .divide {
   height: 117px;
-  color: #d8d8de;
+  color: grey;
+  opacity: 0.5;
 }
 
 .news-box {
