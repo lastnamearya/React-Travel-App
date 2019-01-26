@@ -9,6 +9,9 @@ import { ExperienceCard } from './Components/Picks';
 import './new-york.css';
 
 class NewYork extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="new-york-wrapper">

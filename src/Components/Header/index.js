@@ -10,6 +10,11 @@ class Header extends Component {
   state = {
     experience: ''
   };
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   changeExperience = event => this.setState({ experience: event.target.value });
   render() {
     const { backgroundImagesData } = this.props;
