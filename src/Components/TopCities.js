@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
+import { Left, Right } from './Arrows';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './top-cities.css';
@@ -89,32 +90,6 @@ class CityCard extends Component {
       </div>
     );
   }
-}
-
-function Left(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      id="slick-arrow"
-      style={{ ...style, display: 'block' }}
-      onClick={onClick}
-    >
-      <i className="fas fa-arrow-left left-arrow" />
-    </div>
-  );
-}
-
-function Right(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      id="slick-arrow-right"
-      style={{ ...style, display: 'block' }}
-      onClick={onClick}
-    >
-      <i className="fas fa-arrow-right right-arrow" />
-    </div>
-  );
 }
 
 const topCitiesData = [

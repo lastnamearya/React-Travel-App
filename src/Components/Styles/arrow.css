@@ -1,0 +1,44 @@
+/* Caraousel Arrows */
+
+.slick-arrow-left {
+  position: absolute;
+  z-index: 100;
+  font-size: 18px;
+  color: #555754;
+  top: 45%;
+  left: -10px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 2em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.left-arrow,
+.right-arrow {
+  padding-top: 10px;
+}
+
+.slick-arrow-left:hover {
+  color: #4fc3f7;
+}
+
+.slick-arrow-right {
+  position: absolute;
+  z-index: 100;
+  font-size: 18px;
+  color: #555754;
+  top: 45%;
+  right: -10px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 2em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.slick-arrow-right:hover {
+  color: #4fc3f7;
+}
