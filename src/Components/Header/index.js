@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Select from 'react-select';
 import Background from './Background';
 import Logo from '../Images/headout.png';
@@ -48,9 +49,11 @@ export class HeaderNav extends Component {
           <div className="header-left">
             <div className="nav">
               <div className="first-line">
-                <div>
-                  <img id="logo" src={Logo} alt="Headout" />
-                </div>
+                <Link to={{ pathname: `/` }}>
+                  <div>
+                    <img id="logo" src={Logo} alt="Headout" />
+                  </div>
+                </Link>
                 <div className="select-city">
                   <Searchbar style={smallSearchbar} />
                 </div>
@@ -107,10 +110,17 @@ export class HeaderNav extends Component {
                   </span>
                 </p>
               </div>
-              <div className="download-app">
-                <img src={MobileApp} id="mobile-app" alt="Download our App" />
-                <p style={{ color: '#24a1b2' }}>Download App</p>
-              </div>
+              <Link
+                to={{ pathname: `/app` }}
+                style={{
+                  textDecoration: 'none'
+                }}
+              >
+                <div className="download-app">
+                  <img src={MobileApp} id="mobile-app" alt="Download our App" />
+                  <p style={{ color: '#24a1b2' }}>Download App</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
