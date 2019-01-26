@@ -95,7 +95,7 @@
 }
 
 .exp-heart i {
-  color: #f43361;
+  color: white;
   font-size: 20px;
   position: absolute;
   right: 10px;
@@ -107,6 +107,7 @@
 .exp-heart i:hover {
   font-weight: 700;
   transform: scale(1.15);
+  color: #f43361;
 }
 
 .cashback p {
