@@ -22,6 +22,15 @@
   color: #61dafb;
 }
 
+.link {
+  color: #fff;
+  outline: none;
+}
+
+.link:hover {
+  color: #fff;
+}
+
 #external {
   color: #d03034;
   padding-top: 15px;

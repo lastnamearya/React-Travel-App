@@ -7,9 +7,9 @@ import Download from './Components/Download';
 import Media from './Components/Media';
 import Footer from './Components/footer';
 import logo from './Components/Images/headout.png';
-import './Landing.css';
+import './main-home.css';
 
-class Home extends Component {
+class MainHome extends Component {
   state = { width: 0, height: 0 };
 
   componentDidMount() {
@@ -64,4 +64,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default MainHome;
