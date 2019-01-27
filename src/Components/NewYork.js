@@ -5,7 +5,7 @@ import Collections from './Collections';
 import Download from './Download';
 import Media from './Media';
 import Footer from './footer';
-import { ExperienceCard } from './Picks';
+import ExperienceCard from './ExperienceCard';
 import './Styles/new-york.css';
 
 class NewYork extends Component {
