@@ -5,7 +5,6 @@
   margin: 0px auto;
   height: 400px;
   padding-top: 25px;
-  border-bottom: 1px solid #e7e7e7;
 }
 
 .top-cities-wrapper h1 {
@@ -63,7 +62,7 @@
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: bottom 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   margin-bottom: 0px;
-  transition: bottom 0.5s ease-in-out;
+  transition: bottom 3s ease-in-out;
 }
 
 .city-details {

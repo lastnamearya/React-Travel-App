@@ -92,6 +92,13 @@ class PickedSlider extends React.Component {
 }
 
 export class ExperienceCard extends Component {
+  state = {
+    listed: false
+  };
+
+  addtoWishlist = () =>
+    this.setState(prevState => ({ listed: !prevState.listed }));
+
   render() {
     const url = `url(${this.props.url})`;
     const {
@@ -106,6 +113,30 @@ export class ExperienceCard extends Component {
       showMore,
       highlight
     } = this.props;
+
+    let style;
+
+    if (this.state.listed) {
+      style = {
+        color: '#f43361',
+        fontSize: '20px',
+        position: 'absolute',
+        right: '10px',
+        top: '15px',
+        fontWeight: '700',
+        transition: 'transform 0.3s ease-in-out'
+      };
+    } else {
+      style = {
+        color: 'white',
+        fontSize: '20px',
+        position: 'absolute',
+        right: '10px',
+        top: '15px',
+        fontWeight: '400',
+        transition: 'transform 0.3s ease-in-out'
+      };
+    }
 
     return (
       <div className="exp-card">
@@ -132,7 +163,12 @@ export class ExperienceCard extends Component {
                 </div>
               ) : null}
               <div className="exp-heart">
-                <i className="far fa-heart" />
+                <i
+                  className="far fa-heart"
+                  role="button"
+                  onClick={this.addtoWishlist}
+                  style={style}
+                />
               </div>
             </div>
             <div className="exp-content-wrap">

@@ -35,6 +35,15 @@ class TopCities extends Component {
             }}
           />
         </div>
+        <hr
+          style={{
+            width: '85%',
+            height: '1px',
+            marginBottom: '0px',
+            backgroundColor: '#e7e7e7',
+            border: 'none'
+          }}
+        />
       </div>
     );
   }
