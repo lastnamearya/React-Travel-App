@@ -9,18 +9,32 @@
   padding: 0px 20px;
 }
 
+.city-section-wrapper {
+  width: 85%;
+  margin: 0px auto;
+  padding-top: 35px;
+}
+
 /* Media Queries */
 
-/* @media only screen and (min-width: 1200px) and (max-width: 1300px) {
-  .new-york-wrapper {
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  .city-section-wrapper {
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1380px) {
+  .city-section-wrapper {
     width: 95%;
-    margin: 0 auto;
+    padding-left: 50px;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .new-york-wrapper {
-    width: 80%;
+  .city-section-wrapper {
+    width: 70%;
     margin: 0 auto;
+    padding-left: 150px;
   }
-} */
+}

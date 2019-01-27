@@ -38,7 +38,8 @@
 
 .mobile-tablet {
   color: #545454;
-  margin: 30% 30%;
+  margin-top: 30%;
+  margin-left: 33%;
   width: 50%;
 }
 
@@ -53,6 +54,6 @@
 @media only screen and (max-width: 500px) {
   .mobile-tablet {
     width: 60%;
-    margin: 150px auto;
+    margin: 120px auto;
   }
 }

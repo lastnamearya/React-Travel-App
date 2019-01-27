@@ -46,14 +46,7 @@ class NewYork extends Component {
 }
 
 const CitySection = ({ headline, description, cardsData }) => (
-  <div
-    className="city-section-wrapper"
-    style={{
-      width: '85%',
-      margin: '0 auto',
-      paddingTop: '35px'
-    }}
-  >
+  <div className="city-section-wrapper">
     <h2
       style={{
         textAlign: 'left'

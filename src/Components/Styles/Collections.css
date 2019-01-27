@@ -96,9 +96,13 @@
 
 /* Media Queries */
 
-@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+@media only screen and (min-width: 1200px) and (max-width: 1380px) {
   .collections-wrapper {
     width: 95%;
+  }
+
+  .cards-wrapper {
+    margin-left: 90px;
   }
 }
 
