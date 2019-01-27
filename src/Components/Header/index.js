@@ -242,6 +242,7 @@ class Searchbar extends Component {
           value={selectedOption}
           onChange={this.handleChange}
           options={options}
+          className="city-select-dropdown"
         />
       );
     } else {
@@ -252,6 +253,7 @@ class Searchbar extends Component {
           value={selectedOption}
           onChange={this.handleChange}
           options={options}
+          className="city-select-dropdown"
         />
       );
     }

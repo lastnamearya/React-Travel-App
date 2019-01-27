@@ -184,7 +184,7 @@
   width: 216px;
   height: 54px;
   border-radius: 3px;
-  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.2);
   background: white;
   cursor: pointer;
   display: flex;
@@ -199,7 +199,7 @@
 
 .select-experience-large {
   border-radius: 3px;
-  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.15);
   margin-left: 5px;
   background: white;
 }
