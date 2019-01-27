@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/index';
-import TopPicks from './Components/Picks';
-import Collections from './Components/Collections';
-import Download from './Components/Download';
-import Media from './Components/Media';
-import Footer from './Components/footer';
-import { ExperienceCard } from './Components/Picks';
-import './new-york.css';
+import Header from './Header/index';
+import TopPicks from './Picks';
+import Collections from './Collections';
+import Download from './Download';
+import Media from './Media';
+import Footer from './footer';
+import { ExperienceCard } from './Picks';
+import './Styles/new-york.css';
 
 class NewYork extends Component {
   componentDidMount() {

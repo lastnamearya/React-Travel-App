@@ -1,5 +1,5 @@
 import React from 'react';
-import './media.css';
+import './Styles/media.css';
 import MediaOne from './Images/media-one.png';
 import MediaTwo from './Images/media-two.png';
 import MediaThree from './Images/media-three.png';

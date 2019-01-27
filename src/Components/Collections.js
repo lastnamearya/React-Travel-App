@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Collections.css';
+import './Styles/Collections.css';
 
 class Collection extends Component {
   render() {

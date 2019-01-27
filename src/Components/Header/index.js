@@ -4,7 +4,7 @@ import Select from 'react-select';
 import Background from './Background';
 import Logo from '../Images/headout.png';
 import MobileApp from '../Images/mobile-app.gif';
-import './Header.css';
+import '../Styles/Header.css';
 
 class Header extends Component {
   state = {

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import { Left, Right } from './Arrows';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './top-cities.css';
+import './Styles/top-cities.css';
 
 class TopCities extends Component {
   render() {

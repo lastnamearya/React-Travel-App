@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Components/Header';
-import TopCities from './Components/TopCities';
-import HeadoutPicks from './Components/Picks';
-import Collections from './Components/Collections';
-import Download from './Components/Download';
-import Media from './Components/Media';
-import Footer from './Components/footer';
-import './main-home.css';
+import Header from './Header';
+import TopCities from './TopCities';
+import HeadoutPicks from './Picks';
+import Collections from './Collections';
+import Download from './Download';
+import Media from './Media';
+import Footer from './footer';
+import './Styles/main-home.css';
 
 class MainHome extends Component {
   componentDidMount() {

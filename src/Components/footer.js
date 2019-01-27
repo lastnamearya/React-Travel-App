@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css';
+import './Styles/footer.css';
 import HeadoutLogo from './Images/headout.png';
 import Googlelogo from './Images/gplus-connect.png';
 import Twitterlogo from './Images/twitter-connect.png';

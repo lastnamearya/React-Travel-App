@@ -1,5 +1,5 @@
 import React from 'react';
-import './download.css';
+import './Styles/download.css';
 import Iphoneimg from './Images/iphone.png';
 import Androidimg from './Images/android.png';
 import Playstoreimg from './Images/google-store.png';
