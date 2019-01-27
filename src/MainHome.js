@@ -15,7 +15,10 @@ class MainHome extends Component {
   render() {
     return (
       <div className="App">
-        <Header backgroundImagesData={backgroundImagesData} />
+        <Header
+          backgroundImagesData={backgroundImagesData}
+          history={this.props.history}
+        />
         <p id="external">
           <span role="img" aria-label="Warn">
             🙏

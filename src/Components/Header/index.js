@@ -24,12 +24,18 @@ class Header extends Component {
         <HeaderNav
           changeExperience={this.changeExperience}
           experience={this.state.experience}
+          history={this.props.history}
+          selectedCity={this.props.selectedCity}
         />
         <Background backgroundImagesData={backgroundImagesData} />
         <div className="search-bar-div">
           <div className="select-city-large">
             <i className="fas fa-map-marker" />
-            <Searchbar style={customStyles} />
+            <Searchbar
+              style={customStyles}
+              history={this.props.history}
+              selectedCity={this.props.selectedCity}
+            />
           </div>
           <div className="select-experience-large">
             <input
@@ -61,7 +67,11 @@ export class HeaderNav extends Component {
                   </div>
                 </Link>
                 <div className="select-city">
-                  <Searchbar style={smallSearchbar} />
+                  <Searchbar
+                    style={smallSearchbar}
+                    history={this.props.history}
+                    selectedCity={this.props.selectedCity}
+                  />
                 </div>
                 <div className="select-experience">
                   <input
@@ -136,21 +146,21 @@ export class HeaderNav extends Component {
 }
 
 const options = [
-  { value: 'New York', label: 'New York' },
-  { value: 'Las Vegas', label: 'Las Vegas' },
-  { value: 'Rome', label: 'Rome' },
-  { value: 'Paris', label: 'Paris' },
-  { value: 'London', label: 'London' },
-  { value: 'Dubai', label: 'Dubai' },
-  { value: 'Barcelona', label: 'Barcelona' },
-  { value: 'Madrid', label: 'Madrid' },
-  { value: 'Singapore', label: 'Singapore' },
-  { value: 'Venice', label: 'Venice' },
-  { value: 'Milan', label: 'Milan' },
-  { value: 'Naples', label: 'Naples' },
-  { value: 'Budapest', label: 'Budapest' },
-  { value: 'Edinburg', label: 'Edinburg' },
-  { value: 'Florence', label: 'Florence' }
+  { value: 'new-york', label: 'New York' },
+  { value: 'las-vegas', label: 'Las Vegas' },
+  { value: 'rome', label: 'Rome' },
+  { value: 'paris', label: 'Paris' },
+  { value: 'london', label: 'London' },
+  { value: 'dubai', label: 'Dubai' },
+  { value: 'barcelona', label: 'Barcelona' },
+  { value: 'madrid', label: 'Madrid' },
+  { value: 'singapore', label: 'Singapore' },
+  { value: 'venice', label: 'Venice' },
+  { value: 'milan', label: 'Milan' },
+  { value: 'naples', label: 'Naples' },
+  { value: 'budapest', label: 'Budapest' },
+  { value: 'edinburg', label: 'Edinburg' },
+  { value: 'florence', label: 'Florence' }
 ];
 
 const customStyles = {
@@ -214,19 +224,37 @@ class Searchbar extends Component {
 
   handleChange = selectedOption => {
     this.setState({ selectedOption: selectedOption });
+    this.changeUrl(selectedOption.value);
+  };
+
+  changeUrl = url => {
+    this.props.history.push(`/cities/${url}`);
   };
 
   render() {
     const { selectedOption } = this.state;
-    return (
-      <Select
-        styles={this.props.style}
-        placeholder="Select City"
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-      />
-    );
+    const { selectedCity } = this.props;
+    if (selectedCity) {
+      return (
+        <Select
+          styles={this.props.style}
+          placeholder={selectedCity}
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={options}
+        />
+      );
+    } else {
+      return (
+        <Select
+          styles={this.props.style}
+          placeholder="Select City"
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={options}
+        />
+      );
+    }
   }
 }
 

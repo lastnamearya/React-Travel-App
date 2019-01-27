@@ -15,7 +15,11 @@ class NewYork extends Component {
   render() {
     return (
       <div className="new-york-wrapper">
-        <Header backgroundImagesData={backgroundImagesData} />
+        <Header
+          backgroundImagesData={backgroundImagesData}
+          history={this.props.history}
+          selectedCity={'New York'}
+        />
         <TopPicks
           headline={'Top Experiences in New York'}
           pickedData={NewYorkData}
