@@ -16,6 +16,7 @@ class Header extends Component {
   }
 
   changeExperience = event => this.setState({ experience: event.target.value });
+
   render() {
     const { backgroundImagesData } = this.props;
     return (
