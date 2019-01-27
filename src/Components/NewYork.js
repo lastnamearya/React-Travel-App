@@ -19,6 +19,7 @@ class NewYork extends Component {
           backgroundImagesData={backgroundImagesData}
           history={this.props.history}
           selectedCity={'New York'}
+          navigationData={NewYorkNavigationData}
         />
         <TopPicks
           headline={'Top Experiences in New York'}
@@ -155,6 +156,31 @@ const backgroundImagesData = [
     id: 6,
     url:
       'https://cdn-imgix-open.headout.com/flaps/non-city-specific/desktop/experience-desktop.png?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  }
+];
+
+// New York Navigation Data
+
+const NewYorkNavigationData = [
+  {
+    id: 1,
+    name: 'Categories'
+  },
+  {
+    id: 2,
+    name: 'Best Sellers'
+  },
+  {
+    id: 3,
+    name: 'Vatican'
+  },
+  {
+    id: 4,
+    name: 'Colosseum'
+  },
+  {
+    id: 5,
+    name: 'Food and Drinks'
   }
 ];
 

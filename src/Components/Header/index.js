@@ -18,14 +18,20 @@ class Header extends Component {
   changeExperience = event => this.setState({ experience: event.target.value });
 
   render() {
-    const { backgroundImagesData } = this.props;
+    const {
+      backgroundImagesData,
+      navigationData,
+      selectedCity,
+      history
+    } = this.props;
     return (
       <React.Fragment>
         <HeaderNav
           changeExperience={this.changeExperience}
           experience={this.state.experience}
-          history={this.props.history}
-          selectedCity={this.props.selectedCity}
+          history={history}
+          selectedCity={selectedCity}
+          navigationData={navigationData}
         />
         <Background backgroundImagesData={backgroundImagesData} />
         <div className="search-bar-div">
@@ -54,7 +60,32 @@ class Header extends Component {
 }
 
 export class HeaderNav extends Component {
+  static defaultProps = {
+    navigationData: [
+      {
+        id: 1,
+        name: 'Headout Picks'
+      },
+      {
+        id: 2,
+        name: 'Best Sellers'
+      },
+      {
+        id: 3,
+        name: 'Abu Dhabi City Tours'
+      },
+      {
+        id: 4,
+        name: 'Amsterdam Attractions'
+      },
+      {
+        id: 5,
+        name: 'Burj Khalifa'
+      }
+    ]
+  };
   render() {
+    const { navigationData } = this.props;
     return (
       <div className="header-wrap">
         <div className="header-wrapper navbar-fixed-top">
@@ -85,13 +116,10 @@ export class HeaderNav extends Component {
               </div>
               <div className="second-line">
                 <div className="best-picked">
-                  <div>
-                    <p>Headout Picks</p>
-                  </div>
-                  <p>Best Sellers</p>
-                  <p>Abu Dhabi City Tours</p>
-                  <p>Amsterdam Attractions</p>
-                  <p>Burj Khalifa</p>
+                  {navigationData &&
+                    navigationData.map(({ id, name }) => (
+                      <p key={id}>{name}</p>
+                    ))}
                 </div>
                 <div className="support">
                   <p>
@@ -116,16 +144,29 @@ export class HeaderNav extends Component {
               </div>
             </div>
             <div className="header-right">
-              <div className="sign-in">
-                <i className="fas fa-user-circle sign-in-user" />
-                <p style={{ color: '#ec1943', marginLeft: '10px' }}>
-                  Sign in
-                  <span className="arrow-down">
-                    {' '}
-                    <i className="fas fa-angle-down" />
-                  </span>
-                </p>
-              </div>
+              <a
+                href="https://lastnamearya.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <div className="sign-in">
+                  {/* <i className="fas fa-user-circle sign-in-user" /> */}
+                  <div className="lastnamearya-img">
+                    <img
+                      src="https://secure.gravatar.com/avatar/413b990ccd2cf5ba69d609fdba4f0302"
+                      alt="lastnamearya"
+                    />
+                  </div>
+                  <p style={{ color: '#ec1943', marginLeft: '5px' }}>
+                    lastnamearya
+                    <span className="arrow-down">
+                      {' '}
+                      <i className="fas fa-angle-down" />
+                    </span>
+                  </p>
+                </div>
+              </a>
               <Link
                 to={{ pathname: `/app` }}
                 style={{

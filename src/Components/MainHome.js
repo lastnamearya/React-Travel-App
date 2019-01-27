@@ -18,14 +18,23 @@ class MainHome extends Component {
         <Header
           backgroundImagesData={backgroundImagesData}
           history={this.props.history}
+          navigationData={HeaderNavData}
         />
         <p id="external">
+          {' '}
           <span role="img" aria-label="Warn">
-            🙏
+            👷
           </span>{' '}
-          No any External Link is added as per now to anywhere, Please bear{' '}
+          Currently Building{' '}
           <span role="img" aria-label="Warn">
-            🙏
+            🛠💪🔧
+          </span>{' '}
+          New York City{' '}
+          <span role="img" aria-label="Warn">
+            🌆
+          </span>{' '}
+          <span role="img" aria-label="Warn">
+            🦇
           </span>
         </p>
         <TopCities />
@@ -56,6 +65,31 @@ const backgroundImagesData = [
     id: 3,
     url:
       'https://cdn-imgix-open.headout.com/flaps/non-city-specific/desktop/experience-desktop.png?auto=compress&fm=webp&h=501&crop=faces&fit=min'
+  }
+];
+
+// Header Navigation Data
+
+const HeaderNavData = [
+  {
+    id: 1,
+    name: 'Headout Picks'
+  },
+  {
+    id: 2,
+    name: 'Best Sellers'
+  },
+  {
+    id: 3,
+    name: 'Abu Dhabi City Tours'
+  },
+  {
+    id: 4,
+    name: 'Amsterdam Attractions'
+  },
+  {
+    id: 5,
+    name: 'Burj Khalifa'
   }
 ];
 

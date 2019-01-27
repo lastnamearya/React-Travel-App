@@ -122,6 +122,11 @@
   font-size: 20px;
 }
 
+.lastnamearya-img img {
+  width: 20px;
+  border-radius: 50%;
+}
+
 .header-right p {
   color: #545454;
   font-size: 13px;
