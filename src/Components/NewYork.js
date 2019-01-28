@@ -165,11 +165,11 @@ const NewYorkNavigationData = [
   },
   {
     id: 3,
-    name: 'Vatican'
+    name: 'Broadway Show Tickets'
   },
   {
     id: 4,
-    name: 'Colosseum'
+    name: 'City Walks'
   },
   {
     id: 5,
