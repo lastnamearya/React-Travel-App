@@ -14,6 +14,9 @@ I built this during a personal hackathon over a weekend during my early days of 
 -------------------------------------------------------
 
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/apachearrow.svg?style=social&label=Follow)](https://twitter.com/lastnamearya)
+[![Twitter Follow](https://img.shields.io/twitter/follow/lastnamearya.svg?style=social&label=Follow%20%40lastnamearya)](https://twitter.com/lastnamearya)
+
+:house:&nbsp; [lastnamearya.github.io](lastnamearya.github.io)
 
 :email:&nbsp; arya.jigyasu6815@gmail.com
+
